@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-area">
+      <div class="container">
+        <div class="logo">Hamza Elbeialy</div>
+        <button class="toggle-menu">
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+        </button>
+        <nav class="links-container" id="links-container">
+          <ul class="links">
+            <li><a href="#" data-section=".home-page">Home</a></li>
+            <li><a href="#" data-section=".about-me">About</a></li>
+            <li><a href="#" data-section=".experience">Experience</a></li>
+            <li><a href="#" data-section=".contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home-page">
+      <div class="container">
+        <div class="introduction-text" id="home">
+          <div class="content">
+            <h2>
+              Hi There, I'am
+              <br />
+              <span>Hamza Elbeialy</span>
+            </h2>
+            <p>Creative Art Director & Designer</p>
+            <div class="about-btn">
+              <a href="#about-me" data-section=".about-me" class="btn">
+                <span>About</span>
+                <i class="fas fa-arrow-circle-down"></i>
+              </a>
+            </div>
+            <div class="socials">
+              <ul class="social-icons">
+                <li>
+                  <a
+                    href="https://wa.me/201030543525"
+                    class="WhatsApp"
+                    target="_blank"
+                  >
+                    <i class="fab fa-whatsapp"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="facebook"
+                    href="https://www.facebook.com/HamzaElbeialy"
+                    target="_blank"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="instagram"
+                    href="https://www.instagram.com/HamzaElbeialy"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="telegram"
+                    href="https://t.me/HamzaElbeialy"
+                    target="_blank"
+                    ><i class="fab fa-telegram-plane"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="github"
+                    href="https://github.com/HamzaEl-beialy"
+                    target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Tilt Image -->
+        <div id="tiltContainer" class="tilt-wrapper">
+          <div id="tiltCard" class="tilt-card">
+            <img src="imgs/Hamza.jpg" alt="Hamza" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me" id="about-me">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="info-box" id="infoBox">
+            <p>
+              Hi, I'm <strong>Hamza Elbeialy</strong> — a web developer who
+              builds clean, responsive websites and designs unique logos. I work
+              with <strong>React</strong>, <strong>JavaScript</strong>, and
+              other frameworks to create great websites and perform smoothly on
+              any device. I'm passionate about turning ideas into simple,
+              effective designs that help brands stand out.
+            </p>
+          </div>
+          <img class="about-image" id="aboutImg" src="imgs/MyLogo.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <h2 class="heading">Experience</h2>
+      <div class="timeline">
+        <!-- Experience Items -->
+        <div class="container right" id="cont1">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>JavaScript</h2></div>
+            <div class="desc">
+              <p>Skilled in modern JavaScript and browser features</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container left" id="cont2">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>React.js</h2></div>
+            <div class="desc">
+              <p>Build UIs with components, props, and hooks</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container right" id="cont3">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>Responsive Design</h2></div>
+            <div class="desc">
+              <p>Craft mobile's layouts with CSS and media queries</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container left" id="cont4">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>Web Projects</h2></div>
+            <div class="desc">
+              <p>Developed full websites with clean design and flow</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container right" id="cont5">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>Logo Design</h2></div>
+            <div class="desc">
+              <p>Created visual branding using Photoshop and design</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container left" id="cont6">
+          <div class="arrow-icons">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="content">
+            <div class="tag"><h2>Git & GitHub</h2></div>
+            <div class="desc">
+              <p>Track changes and share code with Git and GitHub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="morebtn">
+          <a
+            href="https://www.linkedin.com/in/hamza-ahmad-94571731b"
+            class="btn"
+            target="_blank"
+          >
+            <span>View More</span> <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="left" id="contactLeft">
+          <div class="contact-pic">
+            <img src="./imgs/Contact1.png" alt="Contact" />
+          </div>
+        </div>
+        <!-- <form class="contact-form" id="contact-form"> -->
+        <form
+          action="https://getform.io/f/bllzllwb"
+          method="POST"
+          class="contact-form"
+          id="contact-form"
+        >
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="field">
+              <input type="email" name="email" placeholder="Email" required />
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone" />
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="message">
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">
+              Submit <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Hamza's Portfolio</h3>
+          <p>
+            Thank you for visiting my personal portfolio website. Connect with
+            me on social media.
+          </p>
+        </div>
+        <div class="box">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +20 103-0543-525</p>
+          <p><i class="fas fa-envelope"></i> hamzaelbeialy@gmail.com</p>
+          <p><i class="fas fa-map-marked-alt"></i> Alexandra, Egypt</p>
+          <div class="share">
+            <a
+              href="https://www.facebook.com/HamzaElbeialy"
+              class="fab fa-facebook"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/hamza-ahmad-94571731b"
+              class="fab fa-linkedin"
+              target="_blank"
+            ></a>
+            <a
+              href="https://github.com/HamzaEl-beialy"
+              class="fab fa-github"
+              target="_blank"
+            ></a>
+            <a
+              href="https://t.me/HamzaElbeialy"
+              class="fab fa-telegram-plane"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.fiverr.com/hamzaahmad519"
+              class="fas fa-briefcase"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="credit">
+        <h1 class="container">
+          Designed with
+          <i class="fa-solid fa-heart"></i>
+          by
+          <a href="https://www.github.com/HamzaEl-beialy">Hamza Elbeialy</a>
+        </h1>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <a
+      href="#"
+      class="fas fa-hand-point-up"
+      id="scroll-top"
+      aria-label="ScrollTop"
+    ></a>
+
+    <script src="js/master.js"></script>
+  </body>
+</html>
