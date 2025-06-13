@@ -177,7 +177,6 @@ body {
 #home {
   opacity: 0;
   position: absolute;
-  height: 60%;
   top: 30%;
   left: 0%;
   transform: translateX(-2rem);
@@ -324,7 +323,6 @@ body {
   #home {
     min-width: 100%;
     top: 15%;
-    height: 50%;
   }
   .introduction-text h2 {
     line-height: 1.2;
@@ -554,7 +552,7 @@ body {
 }
 .experience .tag {
   font-size: 1.2rem;
-  padding: 0.8rem 0 0.5rem;
+  padding: 0.8rem 1rem 0.5rem 1rem;
   text-align: center;
   color: var(--skilltext-color);
 }
@@ -564,6 +562,8 @@ body {
 .experience .desc p {
   font-size: 1rem;
   color: var(--text-color);
+  font-family: 'Nunito', sans-serif;
+
   line-height: 1.4;
   font-weight: bold;
   text-align: center;
@@ -978,7 +978,7 @@ form .button-area {
 .contact h2::before {
   content: '';
   position: absolute;
-  height: 2px;
+  height: 3px;
   width: 0%;
   left: 0;
   bottom: -5px;
