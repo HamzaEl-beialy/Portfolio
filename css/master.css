@@ -7,7 +7,6 @@
   --heading-color: rgb(52, 64, 92);
   --hover-color: #37404df5;
   --bluehover-color: #56768ac1;
-  --blue-color: #3464b3;
   --main-color: rgb(10, 16, 46);
   --btn-color: #51a1f0;
   --text-color: #333333;
@@ -194,15 +193,16 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   color: var(--heading-color);
+  -webkit-text-stroke: 1px var(--btn-color);
 }
 .introduction-text .content h2 span {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: var(--blue-color);
+  color: var(--btn-color);
+  -webkit-text-stroke: 3px var(--heading-color);
 }
 .introduction-text .content p {
+  margin-top: 0.5rem;
   font-size: 1.5rem;
-  line-height: 1.3;
+  line-height: 1;
   color: var(--text-color);
   font-weight: 600;
 }
@@ -243,7 +243,7 @@ body {
 .introduction-text .btn {
   position: absolute;
   padding: 0.9rem 0.11rem;
-  width: 30%;
+  width: 8rem;
   text-align: center;
   border-radius: 3em;
   font-size: 1.2rem;
@@ -291,6 +291,7 @@ body {
 .tilt-card img {
   border-radius: 50%;
   width: 100%;
+  box-shadow: 20px 20px 20px #00000085;
   transition: all 0.6s ease-in;
 }
 .tilt-card:hover img {
@@ -328,16 +329,12 @@ body {
   .introduction-text h2 {
     line-height: 1.2;
   }
-  .introduction-text .about-btn {
-    margin-top: 1.3rem;
-  }
   .introduction-text .btn {
-    width: 8rem;
     left: calc(50% - 4rem);
     font-size: 1.1rem;
   }
   .introduction-text .btn i {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .socials .social-icons {
     margin-top: 6.5rem;
@@ -351,7 +348,7 @@ body {
   .tilt-wrapper {
     max-width: 100%;
     left: 5%;
-    top: 58%;
+    top: 62%;
     width: 50rem;
   }
   .tilt-wrapper.active2 {
@@ -368,17 +365,13 @@ body {
     font-size: 1rem;
   }
   .introduction-text .content h2 {
-    font-size: 2.2rem;
-    margin-top: 1.8rem;
-  }
-  .introduction-text .content h2 span {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   .introduction-text .content p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .social-icons a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 3rem;
     width: 3rem;
     height: 3rem;
@@ -390,8 +383,8 @@ body {
 /* End Home Page */
 /* Start About Me */
 .about-me {
-  width: 100%;
-  padding: 4rem 0;
+  padding: 3rem 0 0 0;
+  text-align: center;
 }
 .about-me .container {
   width: 80%;
@@ -399,11 +392,13 @@ body {
   min-height: 35rem;
 }
 .about-me h2 {
-  font-size: 3.5rem;
-  color: var(--heading-color);
-  text-align: center;
+  font-size: 3rem;
+  color: var(--btn-color);
+  -webkit-text-stroke: 3px var(--heading-color);
+  display: inline-block;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  position: relative;
 }
 .about-content {
   display: flex;
@@ -412,6 +407,7 @@ body {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  text-align: left;
 }
 .info-box {
   flex: 1 1 50%;
@@ -425,9 +421,8 @@ body {
 }
 .info-box p {
   font-size: 1.2rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
   color: var(--text-color);
-  margin-bottom: 1rem;
 }
 .about-image {
   flex: 1 1 40%;
@@ -441,7 +436,6 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
-/* Responsive */
 @media (max-width: 870px) {
   .about-content {
     flex-direction: column;
@@ -451,8 +445,9 @@ body {
   .about-image {
     width: 100%;
   }
-  .about-image {
-    margin-top: 2rem;
+  .info-box p {
+    font-size: 1rem;
+    line-height: 1.7rem;
   }
 }
 /* End About Me */
@@ -460,8 +455,9 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 5rem 0 1rem 0;
   box-sizing: border-box;
+  text-align: center;
 }
 .experience .timeline {
   position: relative;
@@ -469,17 +465,17 @@ body {
   margin: 0 auto;
 }
 .experience .heading {
-  width: 100%;
-  text-align: center;
-  font-size: 3.5rem;
-  color: var(--heading-color);
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: var(--btn-color);
+  -webkit-text-stroke: 3px var(--heading-color);
+  margin-bottom: 1rem;
+  display: inline-block;
   position: relative;
 }
 .experience .timeline::after {
   content: '';
   position: absolute;
-  width: 0.5rem;
+  width: 0.8rem;
   height: 100%;
   background: var(--skillcontbg-color);
   top: 0;
@@ -563,8 +559,7 @@ body {
   color: var(--skilltext-color);
 }
 .experience .desc {
-  margin-left: 1.3rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .experience .desc p {
   font-size: 1rem;
@@ -578,13 +573,13 @@ body {
 #cont3,
 #cont5 {
   opacity: 0;
-  transform: translate(3rem, -2rem);
+  transform: translate(1rem, -4rem);
 }
 #cont2,
 #cont4,
 #cont6 {
   opacity: 0;
-  transform: translate(-3rem, -2rem);
+  transform: translate(-1rem, -4rem);
 }
 #cont1.active1,
 #cont2.active2,
@@ -645,7 +640,6 @@ body {
   .experience .container {
     width: 100%;
     left: 4% !important;
-    margin-bottom: 3rem;
   }
   .experience .timeline::after {
     left: 0.5rem;
@@ -671,7 +665,7 @@ body {
   #cont4,
   #cont5,
   #cont6 {
-    transform: translate(-2rem, -2rem);
+    transform: translate(-1rem, -4rem);
   }
   #cont1.active1,
   #cont2.active2,
@@ -684,10 +678,11 @@ body {
 }
 /* Start Contact Me */
 .contact {
-  min-height: 100vh;
+  height: 45rem;
   background-image: url(../imgs/contact.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  text-align: center;
   position: relative;
 }
 .contact .overlay {
@@ -718,11 +713,13 @@ body {
   transform: translateX(0%);
 }
 .contact h2 {
-  font-size: 3.5rem;
-  color: var(--heading-color);
+  font-size: 3rem;
+  color: var(--btn-color);
+  -webkit-text-stroke: 3px var(--heading-color);
   text-align: center;
   margin-top: 5rem;
-  width: 105%;
+  position: relative;
+  display: inline-block;
 }
 .contact .contact-pic img {
   width: 18rem;
@@ -791,7 +788,7 @@ form .message {
   width: 100%;
 }
 form .message i {
-  top: 25px;
+  top: 12px;
   font-size: 20px;
   left: 15px;
 }
@@ -974,4 +971,32 @@ form .button-area {
 }
 #scroll-top.active {
   right: 1rem;
+}
+
+.about-me h2::before,
+.experience .heading::before,
+.contact h2::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--heading-color);
+  animation: underlineGrow 2s infinite linear;
+}
+
+@keyframes underlineGrow {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
 }
