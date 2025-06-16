@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
-  /* --secondry-color: rgb(0, 0, 0, 0.9); */
   --secondry-color: red;
   --heading-color: rgb(52, 64, 92);
   --hover-color: #37404df5;
@@ -192,7 +191,6 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   color: var(--heading-color);
-  -webkit-text-stroke: 1px var(--btn-color);
 }
 .introduction-text .content h2 span {
   color: var(--btn-color);
@@ -322,7 +320,7 @@ body {
   }
   #home {
     min-width: 100%;
-    top: 15%;
+    top: 17%;
   }
   .introduction-text h2 {
     line-height: 1.2;
@@ -346,7 +344,7 @@ body {
   .tilt-wrapper {
     max-width: 100%;
     left: 5%;
-    top: 62%;
+    top: 60%;
     width: 50rem;
   }
   .tilt-wrapper.active2 {
@@ -364,6 +362,7 @@ body {
   }
   .introduction-text .content h2 {
     font-size: 2.4rem;
+    line-height: 1.6;
   }
   .introduction-text .content p {
     font-size: 1.2rem;
