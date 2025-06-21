@@ -11,7 +11,7 @@
   --text-color: #333333;
   --skilltext-color: rgba(255, 255, 255, 0.39);
   --skillcontbg-color: #476cd2;
-  --background-color: linear-gradient(to bottom, #bec9dc, #87a6d5);
+  --background-color: linear-gradient(to right, #bec9dc, #87a6d5);
 }
 
 * {
