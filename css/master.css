@@ -848,6 +848,7 @@ form .button-area {
 }
 .button-area button:hover i {
   left: 8px;
+  color: var(--main-color);
 }
 @media (max-width: 870px) {
   #contactLeft.active1 {
