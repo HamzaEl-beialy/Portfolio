@@ -87,31 +87,31 @@ const experienceElementsLarge = [
   },
   {
     el: document.getElementById('cont2'),
-    min: 55 * 16,
+    min: 54 * 16,
     max: 124 * 16,
     class: 'active2',
   },
   {
     el: document.getElementById('cont3'),
-    min: 62 * 16,
+    min: 60 * 16,
     max: 131 * 16,
     class: 'active3',
   },
   {
     el: document.getElementById('cont4'),
-    min: 69 * 16,
+    min: 66 * 16,
     max: 138 * 16,
     class: 'active4',
   },
   {
     el: document.getElementById('cont5'),
-    min: 76 * 16,
+    min: 72 * 16,
     max: 145 * 16,
     class: 'active5',
   },
   {
     el: document.getElementById('cont6'),
-    min: 83 * 16,
+    min: 78 * 16,
     max: 152 * 16,
     class: 'active6',
   },
@@ -120,62 +120,61 @@ const experienceElementsLarge = [
 const experienceElementsSmall = [
   {
     el: document.getElementById('cont1'),
-    min: 54 * 16,
-    max: 129 * 16,
+    min: 70 * 16,
+    max: 139 * 16,
     class: 'active1',
   },
   {
     el: document.getElementById('cont2'),
-    min: 62 * 16,
-    max: 131 * 16,
+    min: 78 * 16,
+    max: 147 * 16,
     class: 'active2',
   },
   {
     el: document.getElementById('cont3'),
-    min: 70 * 16,
-    max: 139 * 16,
+    min: 86 * 16,
+    max: 155 * 16,
     class: 'active3',
   },
   {
     el: document.getElementById('cont4'),
-    min: 78 * 16,
-    max: 147 * 16,
+    min: 94 * 16,
+    max: 163 * 16,
     class: 'active4',
   },
   {
     el: document.getElementById('cont5'),
-    min: 86 * 16,
-    max: 155 * 16,
+    min: 102 * 16,
+    max: 171 * 16,
     class: 'active5',
   },
   {
     el: document.getElementById('cont6'),
-    min: 94 * 16,
-    max: 163 * 16,
+    min: 110 * 16,
+    max: 179 * 16,
     class: 'active6',
   },
 ];
 
 const contactTriggersLarge = [
-  { el: contactLeft, min: 115 * 16, max: 185 * 16, class: 'active1' },
-  { el: contactForm, min: 115 * 16, max: 185 * 16, class: 'active2' },
+  { el: contactLeft, min: 100 * 16, max: 200 * 16, class: 'active1' },
+  { el: contactForm, min: 100 * 16, max: 200 * 16, class: 'active2' },
 ];
 
 const contactTriggersSmall = [
-  // { el: contactLeft, min: 145 * 16, max: 250 * 16, class: 'active1' },
-  { el: contactForm, min: 110 * 16, max: 250 * 16, class: 'active2' },
+  { el: contactForm, min: 125 * 16, max: 230 * 16, class: 'active2' },
 ];
 
 // Trigger ranges
 const textTriggerAtLarge = 27 * 16;
 const cardTriggerAtLarge = 27 * 16;
 const aboutMinTriggerLarge = 11 * 16;
-const aboutMaxTriggerLarge = 65 * 16;
+const aboutMaxTriggerLarge = 73 * 16;
 
-const textTriggerAtSmall = 35 * 16;
-const cardTriggerAtSmall = 35 * 16;
+const textTriggerAtSmall = 52 * 16;
+const cardTriggerAtSmall = 52 * 16;
 const aboutMinTriggerSmall = 13 * 16;
-const aboutMaxTriggerSmall = 90 * 16;
+const aboutMaxTriggerSmall = 115 * 16;
 
 // On page load, activate home section animations
 window.addEventListener('load', () => {
