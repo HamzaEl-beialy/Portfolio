@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -35,7 +34,8 @@
           <ul class="links">
             <li><a href="#" data-section=".home-page">Home</a></li>
             <li><a href="#" data-section=".about-me">About</a></li>
-            <li><a href="#" data-section=".experience">Experience</a></li>
+            <li><a href="#" data-section=".experience">skills</a></li>
+            <li><a href="#" data-section=".work">Work</a></li>
             <li><a href="#" data-section=".contact">Contact</a></li>
           </ul>
         </nav>
@@ -140,7 +140,7 @@
 
     <!-- Experience Section -->
     <section class="experience" id="experience">
-      <h2 class="heading">Experience</h2>
+      <h2 class="heading">My Skills</h2>
       <div class="timeline">
         <!-- Experience Items -->
         <div class="container right" id="cont1">
@@ -227,6 +227,70 @@
       </div>
     </section>
 
+    <!-- My Work -->
+    <section class="work" id="work">
+      <h2 class="work-heading">Latest Work</h2>
+      <div class="work-container" id="workContainer">
+        <div data-tilt class="project">
+          <div class="project-main">
+            <img src="./imgs/bank.png" alt="" />
+          </div>
+          <div class="project-text">
+            <h2>Bank Trail</h2>
+            <p>
+              This is a simple bank trail website that i made showing my skills.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a
+              target="_blank"
+              href="https://hamzael-beialy.github.io/BankTrail/"
+              class="project-preview"
+              >Visit <i class="fa-solid fa-link"></i
+            ></a>
+          </div>
+        </div>
+        <div data-tilt class="project">
+          <div class="project-main">
+            <img src="./imgs/specialdesign.png" alt="" />
+          </div>
+          <div class="project-text">
+            <h2>Special Design</h2>
+            <p>
+              A special design with dark mode, random backgrounds, and more
+              features.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a
+              target="_blank"
+              href="https://hamzael-beialy.github.io/SpecialDesign/"
+              class="project-preview"
+              >Visit <i class="fa-solid fa-link"></i
+            ></a>
+          </div>
+        </div>
+        <div data-tilt class="project">
+          <div class="project-main">
+            <img src="./imgs/template.png" alt="" />
+          </div>
+          <div class="project-text">
+            <h2>Template</h2>
+            <p>
+              This is a template website that i made to improving my skills in.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a
+              target="_blank"
+              href="https://hamzael-beialy.github.io/Template/"
+              class="project-preview"
+              >Visit <i class="fa-solid fa-link"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Contact Section -->
     <section class="contact">
       <div class="overlay"></div>
@@ -330,6 +394,7 @@
       id="scroll-top"
       aria-label="ScrollTop"
     ></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
     <script src="js/master.js"></script>
   </body>
