@@ -117,7 +117,7 @@ body {
   transform: rotate(-48deg) translate(0.4rem, -0.4rem);
 }
 
-/* Mobile Styles */
+/* Mobile Styles  */
 @media (max-width: 870px) {
   .header-area .logo {
     font-size: 2rem;
@@ -373,6 +373,7 @@ body {
     width: 18rem;
   }
 }
+
 .about-me {
   padding-top: 3rem;
   text-align: center;

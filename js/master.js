@@ -1,3 +1,4 @@
+// ========== Smooth Scroll for Links ==========
 const allLinks = document.querySelectorAll('.links a');
 
 function scrollToSomewhere(elements) {
@@ -29,7 +30,7 @@ scrollTopBtn.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ========== 3D Card Effect ==========
+// ========== 3D Tilt Card Effect ==========
 const card = document.getElementById('tiltCard');
 const container = document.getElementById('tiltContainer');
 if (card && container) {
@@ -53,13 +54,16 @@ if (card && container) {
   });
 }
 
-// ========== Generic Observer ==========
-function observeElement(element, className, threshold = 0.5) {
+// ========== Observe Element Once ==========
+function observeElementOnce(element, className, threshold = 0.5) {
   if (!element) return;
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
       entries.forEach((entry) => {
-        element.classList.toggle(className, entry.isIntersecting);
+        if (entry.isIntersecting) {
+          element.classList.add(className);
+          observer.unobserve(entry.target); // Only once
+        }
       });
     },
     { threshold },
@@ -67,11 +71,11 @@ function observeElement(element, className, threshold = 0.5) {
   observer.observe(element);
 }
 
-// Observe general sections
-observeElement(document.getElementById('home'), 'active1', 0.3);
-observeElement(document.getElementById('tiltContainer'), 'active2', 0.3);
-observeElement(document.getElementById('infoBox'), 'active1', 0.4);
-observeElement(document.getElementById('aboutImg'), 'active2', 0.4);
+// ========== Observe General Sections ==========
+observeElementOnce(document.getElementById('home'), 'active1', 0.3);
+observeElementOnce(document.getElementById('tiltContainer'), 'active2', 0.3);
+observeElementOnce(document.getElementById('infoBox'), 'active1', 0.4);
+observeElementOnce(document.getElementById('aboutImg'), 'active2', 0.4);
 
 // ========== Contact Section ==========
 const contactSection = document.getElementById('contact');
@@ -80,11 +84,13 @@ const contactForm = document.getElementById('contact-form');
 
 if (contactSection && contactLeft && contactForm) {
   const contactObserver = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
       entries.forEach((entry) => {
-        const visible = entry.isIntersecting;
-        contactLeft.classList.toggle('active', visible);
-        contactForm.classList.toggle('active', visible);
+        if (entry.isIntersecting) {
+          contactLeft.classList.add('active');
+          contactForm.classList.add('active');
+          observer.unobserve(entry.target);
+        }
       });
     },
     { threshold: 0.5 },
@@ -92,39 +98,35 @@ if (contactSection && contactLeft && contactForm) {
   contactObserver.observe(contactSection);
 }
 
-// ========== Work Section with Delays ==========
-const workSection = document.getElementById('work');
-const work1 = document.getElementById('work1');
-const work2 = document.getElementById('work2');
-const work3 = document.getElementById('work3');
+// ========== Work Section (with delay & once) ==========
+document.addEventListener('DOMContentLoaded', () => {
+  const workSection = document.getElementById('work');
+  const workProjects = document.querySelectorAll('#work .project');
 
-if (workSection && work1 && work2 && work3) {
-  const workObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // When any part of #work is visible, activate children with delay
-          work1.classList.add('active');
-          setTimeout(() => work2.classList.add('active'), 500);
-          setTimeout(() => work3.classList.add('active'), 1000);
-        } else if (entry.intersectionRatio === 0) {
-          // Only remove when #work is fully out of view
-          work1.classList.remove('active');
-          work2.classList.remove('active');
-          work3.classList.remove('active');
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: [0, 0.01],
-    },
-  );
+  if (workSection && workProjects.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            workProjects.forEach((project, index) => {
+              setTimeout(() => {
+                project.classList.add('active');
+              }, index * 300); // 300ms stagger
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
 
-  workObserver.observe(workSection);
-}
+    observer.observe(workSection);
+  }
+});
 
-// ========== Experience Items ==========
+// ========== Experience Cards ==========
 const experienceCards = [
   { id: 'cont1', className: 'active1' },
   { id: 'cont2', className: 'active2' },
@@ -134,7 +136,7 @@ const experienceCards = [
   { id: 'cont6', className: 'active6' },
 ];
 experienceCards.forEach(({ id, className }) => {
-  observeElement(document.getElementById(id), className, 0.5);
+  observeElementOnce(document.getElementById(id), className, 0.5);
 });
 
 // ========== Mobile Menu ==========
