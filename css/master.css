@@ -680,21 +680,18 @@ body {
 .work {
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   box-sizing: border-box;
-  padding-top: 4rem;
+  padding-top: 6rem;
   text-align: center;
 }
 .work .work-container {
-  opacity: 0;
-  transform: translateY(-4rem);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 80%;
   left: 10%;
   position: relative;
-  transition: var(--transition);
   padding-top: 1rem;
 }
 .work .work-heading {
@@ -706,6 +703,9 @@ body {
   display: inline-block;
 }
 .work .work-container .project {
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: var(--transition);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -719,9 +719,8 @@ body {
   color: white;
   border: 2px solid var(--main-color);
   overflow: hidden;
-  transform-style: preserve-3d;
 }
-.work .work-container.active {
+.work .work-container .project.active {
   opacity: 1;
   transform: translateY(0);
 }
