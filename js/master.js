@@ -100,22 +100,19 @@ if (contactSection && contactLeft && contactForm) {
   );
   contactObserver.observe(contactSection);
 }
-
-// ========== Work Section (with delay & once) ==========
+// ========== Work Section (each project + delay) ==========
 document.addEventListener('DOMContentLoaded', () => {
-  const workSection = document.getElementById('work');
   const workProjects = document.querySelectorAll('#work .project');
 
-  if (workSection && workProjects.length > 0) {
+  if (workProjects.length > 0) {
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            workProjects.forEach((project, index) => {
-              setTimeout(() => {
-                project.classList.add('active');
-              }, index * 300);
-            });
+            const index = Array.from(workProjects).indexOf(entry.target);
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, index * 300);
             observer.unobserve(entry.target);
           }
         });
@@ -125,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     );
 
-    observer.observe(workSection);
+    // Observe each project
+    workProjects.forEach((project) => observer.observe(project));
   }
 });
 

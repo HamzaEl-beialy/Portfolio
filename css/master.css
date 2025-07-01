@@ -29,6 +29,9 @@ body {
   background: var(--background-color);
   overflow: hidden;
 }
+h2 {
+  line-height: 1;
+}
 .header-area {
   position: fixed;
   background: var(--main-color);
@@ -711,6 +714,7 @@ body {
   font-size: 3.5rem;
   color: var(--btn-color);
   -webkit-text-stroke: 3px var(--main-color);
+  margin-bottom: 2rem;
   text-align: center;
   position: relative;
   display: inline-block;
@@ -802,7 +806,6 @@ body {
 
 @media (max-width: 480px) {
   .work .work-container {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -1133,8 +1136,4 @@ form .button-area {
     width: 0%;
     left: 100%;
   }
-}
-
-h2 {
-  line-height: 1;
 }
