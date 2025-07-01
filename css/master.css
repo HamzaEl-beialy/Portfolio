@@ -3,10 +3,11 @@
 :root {
   --main-color: rgb(5 8 22);
   --btn-color: #197bdd;
-  --text-color: #333333;
-  --background-color: linear-gradient(to right, #848c9e, #6781b4);
-  --transition: all 0.5s ease-in;
+  --text-color: #e6edf3;
+  --background-color: linear-gradient(to right, #4f5d75, #6c7a96);
+  --transition: all 0.5s ease-in-out;
 }
+
 *,
 *::before,
 *::after {
