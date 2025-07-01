@@ -189,7 +189,7 @@ body {
   position: absolute;
   top: 30%;
   left: 0%;
-  transform: translateX(-2rem);
+  transform: translateX(-3rem);
   transition: var(--transition);
   z-index: 2;
 }
@@ -277,7 +277,7 @@ body {
 .tilt-wrapper {
   opacity: 0;
   position: absolute;
-  transform: translateX(2rem);
+  transform: translateX(3rem);
   top: 26%;
   width: 23.3rem;
   right: 0;
@@ -424,7 +424,7 @@ body {
 .info-box {
   flex: 1 1 55%;
   opacity: 0;
-  transform: translateX(-2rem);
+  transform: translateX(-3rem);
   transition: var(--transition);
 }
 .info-box.active1 {
@@ -443,7 +443,7 @@ body {
   border-radius: 45px;
   box-shadow: 20px 20px 25px rgb(0, 0, 0, 0.8);
   opacity: 0;
-  transform: translateX(2rem);
+  transform: translateX(3rem);
   transition: var(--transition);
 }
 .about-image.active2 {
@@ -835,7 +835,7 @@ body {
 }
 #contactLeft {
   opacity: 0;
-  transform: translateX(-3rem);
+  transform: translateX(-4rem);
   width: 40%;
   position: absolute;
   top: 28%;
@@ -864,7 +864,7 @@ body {
   right: 0;
   top: 25%;
   margin-right: 3%;
-  transform: translateX(2rem);
+  transform: translateX(3rem);
 
   width: 60%;
   transition: var(--transition);
