@@ -40,7 +40,7 @@ if (card && container) {
     const centerY = bounds.top + bounds.height / 2;
     const xRotation = ((e.clientY - centerY) / 20).toFixed(2);
     const yRotation = ((centerX - e.clientX) / 20).toFixed(2);
-    card.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.08)`;
+    card.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.07)`;
     card.style.transition = 'transform 0.1s ease';
   });
 
@@ -62,7 +62,7 @@ function observeElementOnce(element, className, threshold = 0.5) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           element.classList.add(className);
-          observer.unobserve(entry.target); // Only once
+          observer.unobserve(entry.target);
         }
       });
     },
