@@ -11,8 +11,8 @@ function scrollToSomewhere(elements) {
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
-      toggleBtn.classList.remove('active');
-      linksContainer.classList.remove('active');
+      toggleBtn?.classList.remove('active');
+      linksContainer?.classList.remove('active');
       allLinks.forEach((link) => link.classList.remove('active'));
       e.target.classList.add('active');
     });
@@ -22,13 +22,16 @@ scrollToSomewhere(allLinks);
 
 // ========== Scroll To Top Button ==========
 const scrollTopBtn = document.getElementById('scroll-top');
-window.addEventListener('scroll', () => {
-  scrollTopBtn.classList.toggle('active', window.scrollY > 100);
-});
-scrollTopBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('active', window.scrollY > 100);
+  });
+
+  scrollTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ========== 3D Tilt Card Effect ==========
 const card = document.getElementById('tiltCard');
@@ -111,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             workProjects.forEach((project, index) => {
               setTimeout(() => {
                 project.classList.add('active');
-              }, index * 300); // 300ms stagger
+              }, index * 300);
             });
             observer.unobserve(entry.target);
           }
@@ -142,7 +145,9 @@ experienceCards.forEach(({ id, className }) => {
 // ========== Mobile Menu ==========
 const toggleBtn = document.querySelector('.header-area .toggle-menu');
 const linksContainer = document.querySelector('.header-area .links-container');
-toggleBtn.addEventListener('click', () => {
-  toggleBtn.classList.toggle('active');
-  linksContainer.classList.toggle('active');
-});
+if (toggleBtn && linksContainer) {
+  toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('active');
+    linksContainer.classList.toggle('active');
+  });
+}

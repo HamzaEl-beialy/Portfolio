@@ -697,7 +697,7 @@ body {
     transform: translate(0, 0);
   }
 }
-/* Start Work */
+/* ========== Start Work Section ========== */
 .work {
   position: relative;
   width: 100%;
@@ -721,25 +721,24 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 80%;
-  left: 10%;
-  position: relative;
+  margin: 0 auto;
   padding-top: 1rem;
   gap: 1rem;
+  position: relative;
 }
 
-.work .work-container .project {
+.work .project {
   opacity: 0;
   transform: translateY(-3rem);
   transition:
     transform 0.5s ease,
     opacity 0.5s ease;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc(33.33% - 1rem);
-  margin-bottom: 1rem;
   padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 16px;
   background: var(--main-color);
   color: white;
@@ -747,24 +746,24 @@ body {
   overflow: hidden;
 }
 
-.work .work-container .project.active {
+.work .project.active {
   opacity: 1;
   transform: translateY(0);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.work .work-container .project-main img {
+.work .project-main img {
   padding: 1rem;
   width: 100%;
 }
 
-.work .work-container .project .project-text h2 {
+.work .project .project-text h2 {
   font-size: 1.8rem;
   color: var(--btn-color);
   margin: 0.5rem 0;
 }
 
-.work .work-container .project .project-footer {
+.work .project .project-footer {
   margin: 1rem 0;
   padding: 0.7rem;
   width: 7rem;
@@ -773,15 +772,15 @@ body {
   text-align: center;
 }
 
-.work .work-container .project .project-footer a,
-.work .work-container .project .project-footer i {
+.work .project .project-footer a,
+.work .project .project-footer i {
   color: var(--main-color);
 }
 
 /* ========== Responsive ========== */
 
 @media (max-width: 992px) {
-  .work .work-container .project {
+  .work .project {
     width: calc(50% - 1rem);
   }
 }
@@ -792,11 +791,11 @@ body {
     align-items: center;
   }
 
-  .work .work-container .project {
+  .work .project {
     width: 100%;
   }
 
-  .work .work-container .project-main {
+  .work .project-main {
     font-size: 20px;
   }
 }
@@ -808,6 +807,7 @@ body {
     gap: 1rem;
   }
 }
+
 /* End Work */
 .contact {
   height: 50rem;
