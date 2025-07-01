@@ -63,7 +63,7 @@ body {
   display: flex;
   align-items: flex-end;
   transition: 0.5s ease-in;
-  background: #050816f2;
+  background: #050816d6;
 }
 
 .header-area .links-container.active {
