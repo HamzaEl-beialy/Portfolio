@@ -81,15 +81,6 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   transition: 0.3s ease;
-}
-
-.header-area .links li a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.header-area .links li a {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -1029,6 +1020,7 @@ form .button-area {
   width: 3rem;
   border-radius: 5rem;
   font-size: 1.5rem;
+  box-shadow: 4px 4px 20px;
   margin-right: 1rem;
   transition: 0.5s;
   background: var(--main-color);
