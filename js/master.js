@@ -20,18 +20,24 @@ function scrollToSomewhere(elements) {
 }
 scrollToSomewhere(allLinks);
 
+// // ========== Scroll To Top Button ==========
+// const scrollTopBtn = document.getElementById('scroll-top');
+// if (scrollTopBtn) {
+//   window.addEventListener('scroll', () => {
+//     scrollTopBtn.classList.toggle('active', window.scrollY > 100);
+//   });
+
+//   scrollTopBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   });
+// }
+
 // ========== Scroll To Top Button ==========
 const scrollTopBtn = document.getElementById('scroll-top');
-if (scrollTopBtn) {
-  window.addEventListener('scroll', () => {
-    scrollTopBtn.classList.toggle('active', window.scrollY > 100);
-  });
-
-  scrollTopBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('active', window.scrollY > 100);
+});
 
 // ========== 3D Tilt Card Effect ==========
 const card = document.getElementById('tiltCard');
