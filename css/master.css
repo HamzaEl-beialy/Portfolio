@@ -176,7 +176,7 @@ h2 {
     width: 6rem;
   }
 }
-
+/* Start Home Page */
 .home-page {
   position: relative;
   width: 100%;
@@ -191,37 +191,35 @@ h2 {
 #home {
   opacity: 0;
   position: absolute;
-  top: 31%;
+  width: 50%;
+  top: 33%;
   left: 0%;
   transform: translateX(-3rem);
-  transition: var(--transition);
-  z-index: 2;
+  transition: all 0.5s ease-in;
+  z-index: 1;
 }
 #home.active1 {
   opacity: 1;
   transform: translateX(0);
 }
+
 .introduction-text .content h2 {
-  font-size: 3.8rem;
-  line-height: 1;
+  font-size: 3rem;
   font-weight: 800;
-  color: var(--main-color);
+  color: var(--heading-color);
 }
 .introduction-text .content h2 span {
-  font-size: 3.2rem;
-  color: var(--btn-color);
-  -webkit-text-stroke: 3px var(--main-color);
+  color: var(--heading-color);
 }
 .introduction-text .content p {
-  margin-top: 0.5rem;
   font-size: 1.5rem;
-  line-height: 1;
+  margin-top: 0.4rem;
   color: var(--text-color);
   font-weight: 600;
 }
 .socials .social-icons {
   position: absolute;
-  top: 16rem;
+  margin-top: 5.5rem;
   width: 100%;
 }
 .socials .social-icons li {
@@ -233,12 +231,12 @@ h2 {
   line-height: 3.5rem;
   color: var(--btn-color);
   background-color: var(--main-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   width: 3.5rem;
   height: 3.5rem;
   text-align: center;
-  margin-right: 1rem;
+  margin-right: 0.3rem;
   border-radius: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 .social-icons a:active,
 .social-icons a:focus,
@@ -246,10 +244,11 @@ h2 {
   color: var(--main-color);
   background-color: var(--btn-color);
 }
+
 .introduction-text .about-btn {
   position: absolute;
   width: 100%;
-  top: 11rem;
+  margin-top: 1rem;
 }
 .introduction-text .about-btn span {
   font-weight: bold;
@@ -257,7 +256,7 @@ h2 {
 .introduction-text .btn {
   position: absolute;
   padding: 0.7rem 0;
-  width: 10rem;
+  width: 9rem;
   text-align: center;
   border-radius: 3em;
   font-size: 1.2rem;
@@ -282,12 +281,12 @@ h2 {
   opacity: 0;
   position: absolute;
   transform: translateX(3rem);
-  top: 26%;
-  width: 23.3rem;
+  top: 28%;
+  max-width: 22rem;
   right: 0;
-  transition: var(--transition);
-  perspective: 25rem;
-  z-index: 1;
+  transition: all 0.5s ease-in;
+  z-index: 0;
+  perspective: 35rem;
 }
 .home-page .active2 {
   opacity: 1;
@@ -297,53 +296,27 @@ h2 {
   position: absolute;
   width: 100%;
 }
-#tilt-card {
+.tilt-card {
   transform-style: preserve-3d;
-  transition: var(--transition);
-  border-radius: 50%;
+  transition: all 0.5s ease-in;
 }
 .tilt-card img {
-  border-radius: 3rem;
   width: 100%;
+  transition: all 0.5s ease-in;
+  transform: scale(1);
+  border-radius: 2rem;
   box-shadow: 20px 20px 20px #00000085;
-  transition: var(--transition);
 }
 .tilt-card:hover img {
   transform: scale(1.05);
-}
-.tilt-card img {
-  transform: scale(1);
-}
-.introduction-text .image {
-  flex: 1 1 40rem;
-  z-index: 1;
-}
-.introduction-text .image:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-.introduction-text .image img {
-  width: 70%;
-  margin-left: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.introduction-text .image img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 870px) {
   .home-page .container {
     text-align: center;
   }
   #home {
-    min-width: 100%;
+    width: 100%;
     top: 14%;
-  }
-  .introduction-text .content h2 {
-    font-size: 3.3rem;
-  }
-  .introduction-text .content h2 span {
-    font-size: 2.8rem;
   }
   .introduction-text .btn {
     left: calc(50% - 5rem);
@@ -351,64 +324,45 @@ h2 {
   .introduction-text .btn i {
     font-size: 1rem;
   }
-  .introduction-text .about-btn {
-    top: 9.3rem;
-  }
-  .socials .social-icons {
-    top: 13.5rem;
-  }
-  .socials .social-icons a {
-    font-size: 1.6rem;
-    line-height: 3rem;
-    width: 3rem;
-    height: 3rem;
+  .social-icons a {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
   .tilt-wrapper {
     max-width: 100%;
-    width: 50rem;
     left: 5%;
-    top: 55%;
+    top: 62%;
   }
   .tilt-wrapper.active2 {
     left: 0;
   }
   .tilt-card img {
-    width: 22rem;
+    max-width: 18rem;
   }
 }
-@media (max-width: 505px) {
-  .introduction-text .btn {
-    width: 8rem;
-    left: calc(50% - 4rem);
-    font-size: 1rem;
+@media (max-width: 480px) {
+  #home {
+    top: 13%;
   }
   .introduction-text .content h2 {
-    font-size: 3rem;
-  }
-  .introduction-text .content h2 span {
-    font-size: 2.55rem;
+    font-size: 2.3rem;
   }
   .introduction-text .content p {
-    font-size: 1.1rem;
-  }
-  .introduction-text .about-btn {
-    top: 8.5rem;
-  }
-  .socials .social-icons {
-    top: 12.5rem;
+    font-size: 1.2rem;
   }
   .social-icons a {
-    font-size: 1.7rem;
-    line-height: 3rem;
-    width: 3rem;
-    height: 3rem;
-    margin-right: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .tilt-card img {
-    width: 18rem;
+    max-width: 16rem;
   }
 }
-
+/* End Home Page */
 .about-me {
   padding-top: 3rem;
   text-align: center;
@@ -423,7 +377,7 @@ h2 {
   color: var(--btn-color);
   -webkit-text-stroke: 3px var(--main-color);
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
   position: relative;
 }
