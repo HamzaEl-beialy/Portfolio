@@ -260,7 +260,7 @@ h2 {
 .introduction-text .btn {
   position: absolute;
   padding: 0.7rem 0;
-  width: 9rem;
+  width: 10rem;
   text-align: center;
   border-radius: 3em;
   font-size: 1.2rem;
@@ -285,8 +285,8 @@ h2 {
   opacity: 0;
   position: absolute;
   transform: translateX(3rem);
-  top: 28%;
-  max-width: 22rem;
+  top: 30%;
+  max-width: 20rem;
   right: 0;
   transition: all 0.5s ease-in;
   z-index: 0;
@@ -308,7 +308,7 @@ h2 {
   width: 100%;
   transition: all 0.5s ease-in;
   transform: scale(1);
-  border-radius: 2rem;
+  border-radius: 3rem;
   box-shadow: 20px 20px 20px #00000085;
 }
 .tilt-card:hover img {
@@ -323,7 +323,9 @@ h2 {
     top: 14%;
   }
   .introduction-text .btn {
-    left: calc(50% - 5rem);
+    left: calc(50% - 4rem);
+    width: 8rem;
+    font-size: 1rem;
   }
   .introduction-text .btn i {
     font-size: 1rem;
