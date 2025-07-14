@@ -6,6 +6,7 @@
   --text-color: #d6dee5;
   --background-color: linear-gradient(to right, #8090ab, #596c94);
   --transition: all 0.5s ease-in-out;
+  --border-radius: 2rem;
 }
 
 *,
@@ -230,7 +231,7 @@ h2 {
   display: inline-block;
 }
 .social-icons a {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   display: inline-block;
   line-height: 3.5rem;
   color: var(--btn-color);
@@ -238,8 +239,7 @@ h2 {
   width: 3.5rem;
   height: 3.5rem;
   text-align: center;
-  margin-right: 0.3rem;
-  border-radius: 100%;
+  border-radius: 1.3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 .social-icons a:active,
@@ -262,7 +262,7 @@ h2 {
   padding: 0.7rem 0;
   width: 10rem;
   text-align: center;
-  border-radius: 3em;
+  border-radius: var(--border-radius);
   font-size: 1.2rem;
   color: var(--btn-color);
   background: var(--main-color);
@@ -308,7 +308,7 @@ h2 {
   width: 100%;
   transition: all 0.5s ease-in;
   transform: scale(1);
-  border-radius: 3rem;
+  border-radius: var(--border-radius);
   box-shadow: 20px 20px 20px #00000085;
 }
 .tilt-card:hover img {
@@ -329,12 +329,6 @@ h2 {
   }
   .introduction-text .btn i {
     font-size: 1rem;
-  }
-  .social-icons a {
-    font-size: 2rem;
-    line-height: 3.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
   }
   .tilt-wrapper {
     max-width: 100%;
@@ -359,7 +353,7 @@ h2 {
     font-size: 1.2rem;
   }
   .social-icons a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2.5rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -399,12 +393,12 @@ h2 {
 .info-box {
   flex: 1 1 55%;
   opacity: 0;
-  transform: translateX(-3rem);
+  transform: translateY(-3rem);
   transition: var(--transition);
 }
 .info-box.active1 {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .info-box p {
   font-family: 'Nunito', sans-serif;
@@ -415,15 +409,15 @@ h2 {
 .about-image {
   flex: 1 1 35%;
   max-width: 24rem;
-  border-radius: 3rem;
+  border-radius: var(--border-radius);
   box-shadow: 20px 20px 25px rgb(0, 0, 0, 0.8);
   opacity: 0;
-  transform: translateX(3rem);
+  transform: translateY(3rem);
   transition: var(--transition);
 }
 .about-image.active2 {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 @media (max-width: 1200px) {
   .about-image {
@@ -485,7 +479,7 @@ h2 {
   position: absolute;
   width: 0.8rem;
   height: 100%;
-  background: var(--btn-color);
+  background: var(--main-color);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -535,13 +529,15 @@ h2 {
 }
 
 .experience .arrow-icons i {
-  width: 2rem;
-  height: 1.8rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
   font-size: 2rem;
-  border-radius: 50%;
-  background: #798ba6;
-  color: var(--main-color);
-  line-height: 2rem;
+  border-radius: 10px;
+  background: var(--main-color);
+  color: var(--btn-color);
 }
 
 .experience .left::before,
@@ -572,9 +568,9 @@ h2 {
 }
 
 .experience .content {
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   position: relative;
-  padding: 0.5rem;
+  padding: 1.2rem;
 }
 
 .experience .tag {
@@ -629,18 +625,6 @@ h2 {
   display: flex;
   justify-content: center;
   margin: 2rem 0;
-}
-
-.morebtn .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.1rem 1.2rem;
-  border-radius: 0.5em;
-  transition: 0.3s;
-  color: var(--btn-color);
-  background: var(--main-color);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
 
 .morebtn .btn span {
@@ -756,7 +740,7 @@ h2 {
   width: calc(33.33% - 1rem);
   padding: 1rem;
   margin-bottom: 1rem;
-  border-radius: 16px;
+  border-radius: 1rem;
   background: var(--main-color);
   color: white;
   border: 2px solid var(--main-color);
@@ -784,7 +768,7 @@ h2 {
   margin: 1rem 0;
   padding: 0.7rem;
   width: 7rem;
-  border-radius: 21px;
+  border-radius: var(--border-radius);
   background: var(--btn-color);
   text-align: center;
 }
@@ -959,13 +943,14 @@ form .message textarea::-webkit-scrollbar {
 form .button-area {
   float: right;
 }
-.button-area button {
+.button-area button,
+.morebtn .btn {
   color: var(--btn-color);
   border: none;
   outline: none;
   font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   padding: 1rem 1.3rem;
   background: var(--main-color);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
