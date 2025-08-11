@@ -19,20 +19,6 @@ function scrollToSomewhere(elements) {
   });
 }
 scrollToSomewhere(allLinks);
-
-// // ========== Scroll To Top Button ==========
-// const scrollTopBtn = document.getElementById('scroll-top');
-// if (scrollTopBtn) {
-//   window.addEventListener('scroll', () => {
-//     scrollTopBtn.classList.toggle('active', window.scrollY > 100);
-//   });
-
-//   scrollTopBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   });
-// }
-
 // ========== Scroll To Top Button ==========
 const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
@@ -40,8 +26,8 @@ window.addEventListener('scroll', () => {
 });
 
 // ========== 3D Tilt Card Effect ==========
-const card = document.getElementById('tiltCard');
-const container = document.getElementById('tiltContainer');
+const card = document.getElementById('tiltWrapper');
+const container = document.getElementById('tiltWrapper');
 if (card && container) {
   container.addEventListener('mousemove', (e) => {
     const bounds = container.getBoundingClientRect();
@@ -82,7 +68,7 @@ function observeElementOnce(element, className, threshold = 0.5) {
 
 // ========== Observe General Sections ==========
 observeElementOnce(document.getElementById('home'), 'active1', 0.3);
-observeElementOnce(document.getElementById('tiltContainer'), 'active2', 0.3);
+observeElementOnce(document.getElementById('tiltWrapper'), 'active2', 0.3);
 observeElementOnce(document.getElementById('infoBox'), 'active1', 0.4);
 observeElementOnce(document.getElementById('aboutImg'), 'active2', 0.4);
 
@@ -155,3 +141,40 @@ if (toggleBtn && linksContainer) {
     linksContainer.classList.toggle('active');
   });
 }
+// animation for typing effect
+const textArray = [
+  'Creative Front-End Developer',
+  'React.js & UI/UX Specialist',
+  'HTML, CSS & JavaScript Expert',
+  'Photoshop & Visual Design Pro',
+  'Some Backend Development Skills',
+];
+
+let i = 0; // Current text index
+let j = 0; // Character index
+let isDeleting = false;
+let speed = 120; // Typing speed
+
+function typeEffect() {
+  const typingElement = document.getElementById('typing');
+  const currentText = textArray[i];
+
+  if (!isDeleting) {
+    typingElement.textContent = currentText.substring(0, j++);
+    if (j > currentText.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1800); // Pause before deleting
+      return;
+    }
+  } else {
+    typingElement.textContent = currentText.substring(0, j--);
+    if (j < 0) {
+      isDeleting = false;
+      i = (i + 1) % textArray.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 60 : speed);
+}
+
+typeEffect();
