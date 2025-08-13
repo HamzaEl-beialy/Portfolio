@@ -24,6 +24,15 @@ const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   scrollTopBtn.classList.toggle('active', window.scrollY > 100);
 });
+/* =========================================================
+ * Theme Toggle Button
+ * ========================================================= */
+const themeBtn = document.querySelector('.theme-btn');
+themeBtn?.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  themeBtn.querySelector('span.sun')?.classList.toggle('active');
+  themeBtn.querySelector('span.moon')?.classList.toggle('active');
+});
 
 // ========== 3D Tilt Card Effect ==========
 const card = document.getElementById('tiltWrapper');
