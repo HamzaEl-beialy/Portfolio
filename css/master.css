@@ -7,7 +7,7 @@
   --text-color: #444444;
   --p-color: #ffffff;
   --background-color: #8a9ab6;
-  --transition: all 0.5s ease-in-out;
+  --transition: all 0.6s ease-in-out;
   --border-radius: 3rem;
   --boxL-shadow: -8px 8px 7px rgba(0, 0, 0, 0.5);
   --boxR-shadow: 8px 8px 7px rgba(0, 0, 0, 0.5);
@@ -222,13 +222,15 @@ h2 {
 #home {
   opacity: 0;
   width: 55%;
-  transform: translateX(-3rem);
-  transition: all 0.5s ease-in;
+  transform: translateX(-5rem);
+  transition: var(--transition);
   z-index: 1;
+  filter: blur(8px);
 }
 #home.active1 {
   opacity: 1;
   transform: translateX(0);
+  filter: blur(0);
 }
 .introduction-text h2,
 .about-me h2,
@@ -324,8 +326,9 @@ h2 {
 .tilt-wrapper,
 .about-image {
   opacity: 0;
+  filter: blur(8px);
   max-width: 22rem;
-  transform: translateX(3rem);
+  transform: translateX(5rem);
   width: 100%;
   transition: var(--transition);
   border-radius: var(--border-radius);
@@ -333,6 +336,7 @@ h2 {
 }
 .home-page .active2 {
   opacity: 1;
+  filter: blur(0);
   transform: translateX(0);
 }
 .tilt-wrapper:hover img {
@@ -424,11 +428,13 @@ h2 {
 .info-box {
   flex: 1 1 50%;
   opacity: 0;
+  filter: blur(8px);
   transform: translateY(-3rem);
   transition: var(--transition);
 }
 .info-box.active1 {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
 }
 .info-box p {
@@ -439,6 +445,7 @@ h2 {
 }
 .about-image.active2 {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
 }
 @media (max-width: 870px) {
@@ -487,6 +494,8 @@ h2 {
   position: relative;
   width: 50%;
   box-sizing: border-box;
+  opacity: 0;
+  filter: blur(8px);
   transition: var(--transition);
 }
 .experience .container.left {
@@ -578,6 +587,7 @@ h2 {
 #cont5.active5,
 #cont6.active6 {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
 }
 .morebtn {
@@ -634,14 +644,6 @@ h2 {
   #cont6 {
     transform: translate(-2rem, -4rem);
   }
-  #cont1.active1,
-  #cont2.active2,
-  #cont3.active3,
-  #cont4.active4,
-  #cont5.active5,
-  #cont6.active6 {
-    transform: translateY(0);
-  }
 }
 /* End Experience */
 /* Start Work */
@@ -675,6 +677,7 @@ h2 {
 }
 .work .project {
   opacity: 0;
+  filter: blur(8px);
   transform: translateY(-3rem);
   transition: 0.5s ease;
   display: flex;
@@ -691,6 +694,7 @@ h2 {
 }
 .work .project.active {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0);
   box-shadow: var(--box-shadow2);
 }
@@ -772,6 +776,7 @@ h2 {
 }
 #contactLeft {
   opacity: 0;
+  filter: blur(8px);
   transform: translateX(-4rem);
   width: 40%;
   position: absolute;
@@ -780,6 +785,7 @@ h2 {
 }
 #contactLeft.active {
   opacity: 1;
+  filter: blur(0);
   transform: translateX(-1rem);
 }
 .contact .contact-pic img {
@@ -787,6 +793,7 @@ h2 {
 }
 .contact .contact-form {
   opacity: 0;
+  filter: blur(8px);
   position: absolute;
   right: 0;
   top: 20%;
@@ -797,6 +804,7 @@ h2 {
 }
 .contact-form.active {
   opacity: 1;
+  filter: blur(0);
   transform: translateX(0);
 }
 form .form-group {
