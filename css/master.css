@@ -283,13 +283,13 @@ h2 {
   transform: translateX(5px);
 }
 #typing {
-  font-weight: bold;
-  color: var(--text-color);
   border-right: 4px solid var(--btn-color);
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
   animation: blinkCursor 0.8s steps(1) infinite;
-  min-width: 28ch;
+  font-size: 1.3rem;
 }
 @keyframes blinkCursor {
   0%,
