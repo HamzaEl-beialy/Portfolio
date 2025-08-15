@@ -187,3 +187,6 @@ function typeEffect() {
 }
 
 typeEffect();
+setTimeout(() => {
+  document.querySelector('.tilt-wrapper').classList.add('animated-tilt');
+}, 1000);
