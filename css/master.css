@@ -266,12 +266,12 @@ h2 {
   text-align: center;
   border-radius: var(--border-radius);
   font-size: 1.2rem;
+  transition: 0.3s;
   color: var(--btn-color);
   background: var(--main-color);
   box-shadow: var(--box-shadow3);
   font-family: 'Nunito', sans-serif;
   cursor: pointer;
-  transition: 0.3s;
   font-weight: bold;
 }
 .introduction-text .btn:hover,

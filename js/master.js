@@ -34,30 +34,6 @@ themeBtn?.addEventListener('click', () => {
   themeBtn.querySelector('span.moon')?.classList.toggle('active');
 });
 
-// ========== 3D Tilt Card Effect ==========
-const card = document.getElementById('tiltWrapper');
-const container = document.getElementById('tiltWrapper');
-if (card && container) {
-  container.addEventListener('mousemove', (e) => {
-    const bounds = container.getBoundingClientRect();
-    const centerX = bounds.left + bounds.width / 2;
-    const centerY = bounds.top + bounds.height / 2;
-    const xRotation = ((e.clientY - centerY) / 20).toFixed(2);
-    const yRotation = ((centerX - e.clientX) / 20).toFixed(2);
-    card.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.07)`;
-    card.style.transition = 'transform 0.1s ease';
-  });
-
-  container.addEventListener('mouseenter', () => {
-    card.style.transition = 'transform 0.2s ease';
-  });
-
-  container.addEventListener('mouseleave', () => {
-    card.style.transition = 'transform 0.5s ease';
-    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-  });
-}
-
 // ========== Observe Element Once ==========
 function observeElementOnce(element, className, threshold = 0.5) {
   if (!element) return;
