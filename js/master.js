@@ -59,15 +59,13 @@ observeElementOnce(document.getElementById('aboutImg'), 'active2', 0.4);
 
 // ========== Contact Section ==========
 const contactSection = document.getElementById('contact');
-const contactLeft = document.getElementById('contactLeft');
 const contactForm = document.getElementById('contact-form');
 
-if (contactSection && contactLeft && contactForm) {
+if (contactSection && contactForm) {
   const contactObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          contactLeft.classList.add('active');
           contactForm.classList.add('active');
           observer.unobserve(entry.target);
         }
