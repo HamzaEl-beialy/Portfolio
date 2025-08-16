@@ -166,3 +166,18 @@ typeEffect();
 setTimeout(() => {
   document.querySelector('.tilt-wrapper').classList.add('animated-tilt');
 }, 1000);
+particlesJS('particles-js', {
+  particles: {
+    number: { value: 60 },
+    color: { value: '#1d7ddd' },
+    shape: { type: 'circle' },
+    opacity: { value: 0.8 },
+    size: { value: 4, random: true },
+    move: { enable: true, speed: 2 },
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: 'repulse' },
+    },
+  },
+});
