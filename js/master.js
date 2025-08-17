@@ -133,10 +133,10 @@ const textArray = [
   'Some Backend Development Skills',
 ];
 
-let i = 0; // Current text index
-let j = 0; // Character index
+let i = 0;
+let j = 0;
 let isDeleting = false;
-let speed = 120; // Typing speed
+let speed = 120;
 
 function typeEffect() {
   const typingElement = document.getElementById('typing');
@@ -146,7 +146,7 @@ function typeEffect() {
     typingElement.textContent = currentText.substring(0, j++);
     if (j > currentText.length) {
       isDeleting = true;
-      setTimeout(typeEffect, 1800); // Pause before deleting
+      setTimeout(typeEffect, 1800);
       return;
     }
   } else {
@@ -166,7 +166,7 @@ setTimeout(() => {
 }, 1000);
 particlesJS('particles-js', {
   particles: {
-    number: { value: 60 },
+    number: { value: 50 },
     color: { value: '#1d7ddd' },
     shape: { type: 'circle' },
     opacity: { value: 0.8 },
