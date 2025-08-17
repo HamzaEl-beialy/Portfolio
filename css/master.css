@@ -683,10 +683,19 @@ h2 {
 /* End Experience */
 /* Start Work */
 .work {
+  opacity: 0;
+  transform: translateY(-6rem);
   position: relative;
   width: 100%;
   min-height: 70vh;
   text-align: center;
+  transition: var(--transition);
+  filter: blur(8px);
+}
+.work.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 .contact h2,
 .work .work-heading {
@@ -711,24 +720,15 @@ h2 {
   position: relative;
 }
 .work .project {
-  transition: var(--transition);
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc(33.33% - 1rem);
   padding: 1rem;
-  opacity: 1;
-  filter: blur(8px);
-  transform: scale(0);
-}
-.work .project.active {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1);
 }
 .work .project-main img {
-  padding: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
   width: 100%;
 }
 .work .project .project-footer {
@@ -743,6 +743,18 @@ h2 {
 .work .project .project-footer i {
   color: var(--main-color);
 }
+.project-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: var(--main-color, #fff);
+}
+
+.project-card:hover {
+  border: 1px solid var(--btn-color);
+  box-shadow: 0 6px 20px rgba(29, 125, 221, 0.25);
+}
+
 @media (max-width: 867px) {
   .work .project {
     width: calc(50% - 1rem);

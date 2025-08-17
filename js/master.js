@@ -59,9 +59,10 @@ observeElementOnce(document.getElementById('aboutImg'), 'active2', 0.4);
 
 // ========== Contact Section ==========
 const contactSection = document.getElementById('contact');
+const WorkSection = document.getElementById('work');
 const contactForm = document.getElementById('contact-form');
 
-if (contactSection && contactForm) {
+if (contactSection && contactForm && WorkSection) {
   const contactObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -73,32 +74,27 @@ if (contactSection && contactForm) {
     },
     { threshold: 0.5 },
   );
-  contactObserver.observe(contactSection);
+  contactObserver.observe(contactSection || WorkSection);
 }
-// ========== Work Section (each project + delay) ==========
-document.addEventListener('DOMContentLoaded', () => {
-  const workProjects = document.querySelectorAll('#work .project');
 
-  if (workProjects.length > 0) {
-    const observer = new IntersectionObserver(
+// ========== Work Section ==========
+document.addEventListener('DOMContentLoaded', () => {
+  const workSection = document.getElementById('work');
+
+  if (workSection) {
+    const workSectionObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Array.from(workProjects).indexOf(entry.target);
-            setTimeout(() => {
-              entry.target.classList.add('active');
-            }, index * 300);
+            workSection.classList.add('active');
             observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.2,
-      },
+      { threshold: 0.3 },
     );
 
-    // Observe each project
-    workProjects.forEach((project) => observer.observe(project));
+    workSectionObserver.observe(workSection);
   }
 });
 
@@ -161,9 +157,11 @@ function typeEffect() {
 }
 
 typeEffect();
-setTimeout(() => {
-  document.querySelector('.tilt-wrapper').classList.add('animated-tilt');
-}, 1000);
+VanillaTilt.init(document.querySelector('.hero-img'), {
+  max: 10,
+  speed: 300,
+  glare: false,
+});
 particlesJS('particles-js', {
   particles: {
     number: { value: 50 },
