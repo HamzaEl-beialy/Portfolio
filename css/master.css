@@ -33,7 +33,7 @@
   outline: none;
   border: none;
   text-transform: capitalize;
-  transition: all 0.2s linear;
+  transition: all 0.6s linear;
 }
 * {
   scrollbar-width: thin;
@@ -77,12 +77,13 @@ h2 {
 }
 .header-area .theme-btn {
   position: absolute;
-  top: 0.4rem;
+  top: 0.7rem;
   display: flex;
+  align-items: center;
   left: calc(50% - 2.5rem);
   background: #8090ab;
   width: 5rem;
-  height: 2.5rem;
+  height: 2rem;
   border-radius: var(--border-radius);
   cursor: pointer;
 }
@@ -97,12 +98,14 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .header-area .theme-btn .active {
   background-color: #3e3e3e;
   border-radius: var(--border-radius);
   color: var(--btn-color);
+  height: 2.5rem;
+  font-size: 1.5rem;
 }
 .header-area .links-container {
   position: fixed;
