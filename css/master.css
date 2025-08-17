@@ -83,7 +83,7 @@ h2 {
   left: calc(50% - 2.5rem);
   background: #8090ab;
   width: 5rem;
-  height: 2rem;
+  height: 2.2rem;
   border-radius: var(--border-radius);
   cursor: pointer;
 }
@@ -94,18 +94,19 @@ h2 {
   color: black;
 }
 .header-area .theme-btn span {
-  width: 50%;
+  width: 43%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 .header-area .theme-btn .active {
-  background-color: #3e3e3e;
+  background-color: #4f4f4f;
+  width: 57%;
   border-radius: var(--border-radius);
   color: var(--btn-color);
-  height: 2.5rem;
-  font-size: 1.5rem;
+  height: 2.7rem;
+  font-size: 1.6rem;
 }
 .header-area .links-container {
   position: fixed;
