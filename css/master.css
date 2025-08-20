@@ -101,7 +101,7 @@ h2 {
   font-size: 0.8rem;
 }
 .header-area .theme-btn .active {
-  background-color: #4f4f4f;
+  background-color: #434343;
   width: 57%;
   border-radius: var(--border-radius);
   color: var(--btn-color);
@@ -115,11 +115,12 @@ h2 {
   display: flex;
   align-items: flex-end;
   transition: var(--transition);
-  background: #050816d6;
-  border-radius: 1.2rem;
+  background: var(--main-color);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 .header-area .links-container.active {
-  top: 4rem;
+  top: 5rem;
   opacity: 1;
 }
 .header-area .links li {
@@ -185,7 +186,7 @@ h2 {
   .header-area .links-container {
     width: 100%;
     right: 0;
-    top: -100%;
+    top: -35rem;
   }
   .header-area .links {
     display: grid;
