@@ -18,5 +18,8 @@
     "printWidth": 80,
     "tabWidth": 2,
     "useTabs": false
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
 }

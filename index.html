@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="icon" href="./imgs/Logo2.png" type="image/png" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -51,7 +53,7 @@
     <!-- Home Section -->
     <section class="home-page">
       <div class="container">
-        <div class="introduction-text" id="home">
+        <div class="introduction-text" id="home" data-aos="zoom-out-right">
           <div class="content">
             <h2>
               Hello There I'm:
@@ -120,28 +122,23 @@
           </div>
         </div>
         <!-- Tilt Image -->
-        <img
-          id="tiltWrapper"
-          class="tilt-wrapper"
-          src="imgs/Hamza.jpg"
-          alt="Hamza"
-        />
-        <div class="particles">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="tilt-wrapper" id="tiltWrapper" data-aos="zoom-out-left">
+          <img src="imgs/Hamza.jpg" alt="Hamza" class="animated-tilt" />
         </div>
+        <div class="particles"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </section>
-
     <!-- About Me Section -->
     <section class="about-me" id="about-me">
       <div class="container">
         <h2>About Me</h2>
         <div class="about-content">
-          <div class="info-box" id="infoBox">
+          <div class="info-box" id="infoBox" data-aos="fade-down">
             <p>
               Hi, I'm Hamza Elbeialy — a web developer who creates clean,
               responsive websites and unique logo designs. I use HTML5, the
@@ -154,7 +151,9 @@
               optimization.
             </p>
           </div>
-          <img class="about-image" id="aboutImg" src="imgs/MyLogo.jpg" />
+          <div class="about-image" id="aboutImage" data-aos="fade-up">
+            <img class="animated-tilt" src="imgs/MyLogo.jpg" />
+          </div>
         </div>
       </div>
     </section>
@@ -175,7 +174,6 @@
             </div>
           </div>
         </div>
-
         <div class="container left" id="cont2">
           <div class="arrow-icons">
             <i class="fa-brands fa-react"></i>
@@ -187,7 +185,6 @@
             </div>
           </div>
         </div>
-
         <div class="container right" id="cont3">
           <div class="arrow-icons">
             <i class="fa-brands fa-css3-alt"></i>
@@ -199,7 +196,6 @@
             </div>
           </div>
         </div>
-
         <div class="container left" id="cont4">
           <div class="arrow-icons">
             <i class="fa-solid fa-laptop-code"></i>
@@ -211,7 +207,6 @@
             </div>
           </div>
         </div>
-
         <div class="container right" id="cont5">
           <div class="arrow-icons">
             <i class="fa-solid fa-image"></i>
@@ -223,7 +218,6 @@
             </div>
           </div>
         </div>
-
         <div class="container left" id="cont6">
           <div class="arrow-icons">
             <i class="fa-brands fa-github"></i>
@@ -235,7 +229,6 @@
             </div>
           </div>
         </div>
-
         <div class="morebtn">
           <a
             href="https://www.linkedin.com/in/hamza-ahmad-94571731b"
@@ -247,12 +240,11 @@
         </div>
       </div>
     </section>
-
     <!-- My Work -->
     <section class="work" id="work">
       <h2 class="work-heading">My Work</h2>
       <div class="work-container">
-        <div data-tilt class="project">
+        <div data-tilt class="project" data-aos="flip-left">
           <div class="project-main">
             <img src="./imgs/bank.png" />
           </div>
@@ -271,7 +263,12 @@
             ></a>
           </div>
         </div>
-        <div data-tilt class="project">
+        <div
+          data-tilt
+          class="project"
+          data-aos="flip-left"
+          data-aos-delay="300"
+        >
           <div class="project-main">
             <img src="./imgs/specialdesign.png" />
           </div>
@@ -291,7 +288,12 @@
             ></a>
           </div>
         </div>
-        <div data-tilt class="project">
+        <div
+          data-tilt
+          class="project"
+          data-aos="flip-left"
+          data-aos-delay="600"
+        >
           <div class="project-main">
             <img src="./imgs/template.png" />
           </div>
@@ -313,7 +315,7 @@
       </div>
     </section>
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
       <div class="overlay"></div>
       <div class="container" id="contact-form">
         <h2>Contact Me</h2>
@@ -417,6 +419,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script type="module" src="js/master.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 2000,
+        once: true,
+      });
+    </script>
+
     <div id="particles-js"></div>
   </body>
 </html>

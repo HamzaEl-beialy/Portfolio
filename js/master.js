@@ -50,54 +50,6 @@ function observeElementOnce(element, className, threshold = 0.5) {
   );
   observer.observe(element);
 }
-
-// ========== Observe General Sections ==========
-observeElementOnce(document.getElementById('home'), 'active1', 0.3);
-observeElementOnce(document.getElementById('tiltWrapper'), 'active2', 0.3);
-observeElementOnce(document.getElementById('infoBox'), 'active1', 0.4);
-observeElementOnce(document.getElementById('aboutImg'), 'active2', 0.4);
-
-// ========== Contact Section ==========
-const contactSection = document.getElementById('contact');
-const WorkSection = document.getElementById('work');
-const contactForm = document.getElementById('contact-form');
-
-if (contactSection && contactForm && WorkSection) {
-  const contactObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          contactForm.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-  contactObserver.observe(contactSection || WorkSection);
-}
-
-// ========== Work Section ==========
-document.addEventListener('DOMContentLoaded', () => {
-  const workSection = document.getElementById('work');
-
-  if (workSection) {
-    const workSectionObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            workSection.classList.add('active');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 },
-    );
-
-    workSectionObserver.observe(workSection);
-  }
-});
-
 // ========== Experience Cards ==========
 const experienceCards = [
   { id: 'cont1', className: 'active1' },

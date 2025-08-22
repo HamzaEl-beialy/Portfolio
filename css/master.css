@@ -225,18 +225,9 @@ h2 {
   justify-content: space-between;
 }
 #home {
-  opacity: 0;
   width: 60%;
-  transform: translateX(-6rem);
-  transition: var(--transition);
+  /* transition: var(--transition); */
   z-index: 1;
-  filter: blur(8px);
-}
-#home.active1 {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  animation: fadeInHome 1s ease backwards;
 }
 .introduction-text h2,
 .about-me h2,
@@ -330,52 +321,45 @@ h2 {
   color: var(--main-color);
   background-color: var(--btn-color);
 }
-.tilt-wrapper,
-.about-image {
-  opacity: 0;
-  filter: blur(8px);
+.tilt-wrapper {
+  position: absolute;
+  right: 0;
+}
+.tilt-wrapper img,
+.about-image img {
   max-width: 21rem;
-  transform: translateX(6rem);
   width: 100%;
-  transition: var(--transition);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow2);
 }
-.home-page .active2 {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-.home-page .active2.animated-tilt {
-  animation: floatTilt 6s ease-in-out infinite;
+.home-page .tilt-wrapper img.animated-tilt,
+.about-image img.animated-tilt {
+  animation: floatTilt 8s ease-in-out infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 @keyframes floatTilt {
   0% {
     transform: perspective(1000px) translateY(0) translateZ(0) rotateX(0deg)
       rotateY(0deg) scale(1);
   }
-  20% {
-    transform: perspective(1000px) translateY(-0.6rem) translateZ(4px)
-      rotateX(1.5deg) rotateY(1deg) scale(1.015);
+  25% {
+    transform: perspective(1000px) translateY(-0.8rem) translateZ(6px)
+      rotateX(1.2deg) rotateY(1deg) scale(1.015);
   }
-  40% {
-    transform: perspective(1000px) translateY(0.3rem) translateZ(-2px)
-      rotateX(-1deg) rotateY(-1.2deg) scale(0.995);
+  50% {
+    transform: perspective(1000px) translateY(0.4rem) translateZ(-4px)
+      rotateX(-1.2deg) rotateY(-1.2deg) scale(0.99);
   }
-  60% {
-    transform: perspective(1000px) translateY(-0.4rem) translateZ(3px)
-      rotateX(0.8deg) rotateY(-1.5deg) scale(1.01);
-  }
-  80% {
-    transform: perspective(1000px) translateY(0.2rem) translateZ(-3px)
-      rotateX(-1.3deg) rotateY(1.2deg) scale(1);
+  75% {
+    transform: perspective(1000px) translateY(-0.6rem) translateZ(5px)
+      rotateX(1deg) rotateY(-1.2deg) scale(1.01);
   }
   100% {
     transform: perspective(1000px) translateY(0) translateZ(0) rotateX(0deg)
       rotateY(0deg) scale(1);
   }
 }
-
 @media (max-width: 870px) {
   .home-page .container {
     flex-direction: column;
@@ -446,9 +430,8 @@ h2 {
   display: inline-block;
   position: relative;
 }
-.about-image {
+.about-image img {
   flex: 1 1 40%;
-  transform: translateY(3rem);
 }
 .about-content {
   display: flex;
@@ -461,15 +444,7 @@ h2 {
 }
 .info-box {
   flex: 1 1 50%;
-  opacity: 0;
-  filter: blur(8px);
-  transform: translateY(-3rem);
-  transition: var(--transition);
-}
-.info-box.active1 {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+  /* transition: var(--transition); */
 }
 .info-box p {
   font-family: 'Nunito', sans-serif;
@@ -477,18 +452,13 @@ h2 {
   line-height: 1.4;
   color: var(--text-color);
 }
-.about-image.active2 {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
 @media (max-width: 870px) {
   .about-content {
     flex-direction: column;
     text-align: center;
   }
   .info-box,
-  .about-image {
+  .about-image img {
     width: 100%;
   }
 }
@@ -684,19 +654,11 @@ h2 {
 /* End Experience */
 /* Start Work */
 .work {
-  opacity: 0;
-  transform: translateY(-6rem);
   position: relative;
   width: 100%;
   min-height: 70vh;
   text-align: center;
   transition: var(--transition);
-  filter: blur(8px);
-}
-.work.active {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
 }
 .contact h2,
 .work .work-heading {
@@ -794,20 +756,12 @@ h2 {
   background-color: rgb(138 138 138 / 0.2);
 }
 .contact .container {
-  opacity: 0;
-  filter: blur(8px);
-  transform: translateY(6rem);
   position: absolute;
   top: 0;
   left: 10%;
   width: 80%;
   height: 100%;
   transition: var(--transition);
-}
-.contact .container.active {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
 }
 #contactLeft {
   width: 40%;
