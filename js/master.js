@@ -34,35 +34,6 @@ themeBtn?.addEventListener('click', () => {
   themeBtn.querySelector('span.moon')?.classList.toggle('active');
 });
 
-// ========== Observe Element Once ==========
-function observeElementOnce(element, className, threshold = 0.5) {
-  if (!element) return;
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          element.classList.add(className);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold },
-  );
-  observer.observe(element);
-}
-// ========== Experience Cards ==========
-const experienceCards = [
-  { id: 'cont1', className: 'active1' },
-  { id: 'cont2', className: 'active2' },
-  { id: 'cont3', className: 'active3' },
-  { id: 'cont4', className: 'active4' },
-  { id: 'cont5', className: 'active5' },
-  { id: 'cont6', className: 'active6' },
-];
-experienceCards.forEach(({ id, className }) => {
-  observeElementOnce(document.getElementById(id), className, 0.5);
-});
-
 // ========== Mobile Menu ==========
 const toggleBtn = document.querySelector('.header-area .toggle-menu');
 const linksContainer = document.querySelector('.header-area .links-container');
@@ -104,10 +75,8 @@ function typeEffect() {
       i = (i + 1) % textArray.length;
     }
   }
-
   setTimeout(typeEffect, isDeleting ? 60 : speed);
 }
-
 typeEffect();
 VanillaTilt.init(document.querySelector('.hero-img'), {
   max: 10,
@@ -131,3 +100,36 @@ particlesJS('particles-js', {
     },
   },
 });
+function updateAOS() {
+  if (window.innerWidth <= 867) {
+    for (let i = 1; i <= 6; i++) {
+      const el = document.getElementById(`cont${i}`);
+      if (el) {
+        el.setAttribute('data-aos', 'fade-down-right');
+      }
+    }
+  } else {
+    document
+      .getElementById('cont1')
+      ?.setAttribute('data-aos', 'fade-down-right');
+    document
+      .getElementById('cont2')
+      ?.setAttribute('data-aos', 'fade-down-left');
+    document
+      .getElementById('cont3')
+      ?.setAttribute('data-aos', 'fade-down-right');
+    document
+      .getElementById('cont4')
+      ?.setAttribute('data-aos', 'fade-down-left');
+    document
+      .getElementById('cont5')
+      ?.setAttribute('data-aos', 'fade-down-right');
+    document
+      .getElementById('cont6')
+      ?.setAttribute('data-aos', 'fade-down-left');
+  }
+
+  AOS.refresh();
+}
+window.addEventListener('load', updateAOS);
+window.addEventListener('resize', updateAOS);
