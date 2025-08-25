@@ -6,7 +6,7 @@
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
-  --background-color: linear-gradient(to right, #8e96a5, #4f6b9d);
+  --background-color: linear-gradient(to right, #989eaa, #5472a5);
   --transition: all 0.8s ease-in-out;
   --border-radius: 3rem;
   --boxL-shadow: -8px 8px 9px rgba(0, 0, 0, 0.7);
@@ -141,10 +141,10 @@ h2 {
   content: '';
   position: absolute;
   height: 4px;
-  width: 4rem;
+  width: 4.2rem;
   border-radius: var(--border-radius);
   background-color: var(--btn-color);
-  bottom: -22px;
+  bottom: -23px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
