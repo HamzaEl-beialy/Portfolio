@@ -985,11 +985,11 @@ form .button-area {
 .contact h2::before {
   content: '';
   position: absolute;
-  height: 4px;
+  height: 5px;
   width: 0%;
   left: 0;
   bottom: -7px;
-  background-color: var(--heading-color);
+  background-color: var(--btn-color);
   animation: underlineGrow 2s infinite linear;
 }
 @keyframes underlineGrow {
