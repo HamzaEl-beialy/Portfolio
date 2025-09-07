@@ -24,21 +24,8 @@ const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   scrollTopBtn.classList.toggle('active', window.scrollY > 100);
 });
-/* =========================================================
- * Theme Toggle Button
- * ========================================================= */
-// const themeBtn = document.querySelector('.theme-btn');
-// themeBtn?.addEventListener('click', () => {
-//   document.body.classList.toggle('dark-theme');
-//   themeBtn.querySelector('span.sun')?.classList.toggle('active');
-//   themeBtn.querySelector('span.moon')?.classList.toggle('active');
-// });
-/* =========================================================
- * Theme Toggle Button with Local Storage
- * ========================================================= */
-/* =========================================================
- * Theme Toggle Button with Local Storage (Corrected Icons)
- * ========================================================= */
+
+// Dark Theme
 const themeBtn = document.querySelector('.theme-btn');
 
 // Check saved theme on load
@@ -84,11 +71,11 @@ if (toggleBtn && linksContainer) {
 }
 // animation for typing effect
 const textArray = [
-  'Creative Front-End Developer',
-  'React.js & UI/UX Specialist',
-  'HTML, CSS & JavaScript Expert',
-  'Photoshop & Visual Design Pro',
-  'Some Backend Development Skills',
+  'Front-End Development',
+  'React.js & UI/UX Design',
+  'Building with HTML, CSS & JavaScript',
+  'Photoshop & Visual Design',
+  'Exploring Backend Development',
 ];
 
 let i = 0;

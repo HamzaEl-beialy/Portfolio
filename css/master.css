@@ -211,7 +211,7 @@ h2 {
 .home-page {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -372,7 +372,7 @@ h2 {
   }
   #home {
     width: 100%;
-    padding-top: 6rem;
+    padding-top: 20%;
   }
   .introduction-text .content h2 {
     font-size: 2.9rem;
@@ -380,7 +380,7 @@ h2 {
   .tilt-wrapper {
     position: relative;
     top: auto;
-    margin: 3rem 0;
+    margin: 4rem 0;
   }
   .tilt-wrapper.active2 {
     left: 0;
@@ -390,6 +390,9 @@ h2 {
   }
 }
 @media (max-width: 480px) {
+  #home {
+    padding-top: 30%;
+  }
   .introduction-text .content h2 {
     font-size: 2.3rem;
   }
@@ -1121,14 +1124,6 @@ form .button-area {
   }
   .introduction-text .content h2 span {
     -webkit-text-stroke: 1.5px var(--heading-color);
-  }
-  .about-me h2,
-  .experience .heading,
-  .contact h2,
-  .work .work-heading {
-    font-size: 2.3rem;
-    color: var(--btn-color);
-    -webkit-text-stroke: 2px var(--heading-color);
   }
   .experience .tag,
   .work .project .project-text h2,
