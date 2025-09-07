@@ -27,11 +27,50 @@ window.addEventListener('scroll', () => {
 /* =========================================================
  * Theme Toggle Button
  * ========================================================= */
+// const themeBtn = document.querySelector('.theme-btn');
+// themeBtn?.addEventListener('click', () => {
+//   document.body.classList.toggle('dark-theme');
+//   themeBtn.querySelector('span.sun')?.classList.toggle('active');
+//   themeBtn.querySelector('span.moon')?.classList.toggle('active');
+// });
+/* =========================================================
+ * Theme Toggle Button with Local Storage
+ * ========================================================= */
+/* =========================================================
+ * Theme Toggle Button with Local Storage (Corrected Icons)
+ * ========================================================= */
 const themeBtn = document.querySelector('.theme-btn');
+
+// Check saved theme on load
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-theme');
+  // Dark mode → Moon active
+  themeBtn?.querySelector('span.moon')?.classList.add('active');
+  themeBtn?.querySelector('span.sun')?.classList.remove('active');
+} else {
+  document.body.classList.remove('dark-theme');
+  // Light mode → Sun active
+  themeBtn?.querySelector('span.sun')?.classList.add('active');
+  themeBtn?.querySelector('span.moon')?.classList.remove('active');
+}
+
+// Toggle theme on button click
 themeBtn?.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
-  themeBtn.querySelector('span.sun')?.classList.toggle('active');
-  themeBtn.querySelector('span.moon')?.classList.toggle('active');
+
+  const isDark = document.body.classList.contains('dark-theme');
+
+  if (isDark) {
+    localStorage.setItem('theme', 'dark');
+    // Dark mode → Moon active
+    themeBtn.querySelector('span.moon')?.classList.add('active');
+    themeBtn.querySelector('span.sun')?.classList.remove('active');
+  } else {
+    localStorage.setItem('theme', 'light');
+    // Light mode → Sun active
+    themeBtn.querySelector('span.sun')?.classList.add('active');
+    themeBtn.querySelector('span.moon')?.classList.remove('active');
+  }
 });
 
 // ========== Mobile Menu ==========

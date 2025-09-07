@@ -6,22 +6,22 @@
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
-  --background-color: linear-gradient(to right, #989eaa, #5472a5);
+  --background-color: linear-gradient(to right, #b5b5b5, #3f66a8);
   --transition: all 0.8s ease-in-out;
   --border-radius: 3rem;
-  --boxL-shadow: -8px 8px 9px rgba(0, 0, 0, 0.7);
-  --boxR-shadow: 8px 8px 9px rgba(0, 0, 0, 0.7);
-  --box-shadow2: 15px 15px 9px rgba(0, 0, 0, 0.7);
-  --box-shadow3: 0 4px 9px rgba(0, 0, 0, 0.7);
+  --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
+  --boxR-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
+  --box-shadow2: 15px 15px 15px rgba(0, 0, 0, 0.7);
+  --box-shadow3: 0 3px 5px rgba(0, 0, 0, 0.7);
 }
 .dark-theme {
-  --background-color: linear-gradient(to left, #112635, #0f1314);
+  --background-color: linear-gradient(to right, black, #124365);
   --text-color: #ffffff;
-  --heading-color: #a7b4c8;
-  --boxL-shadow: -6px 6px 6px rgba(175, 182, 195, 0.4);
-  --boxR-shadow: 6px 6px 6px rgba(175, 182, 195, 0.4);
-  --box-shadow2: 8px 8px 6px rgba(175, 182, 195, 0.4);
-  --box-shadow3: 0 2px 6px rgba(175, 182, 195, 0.4);
+  --heading-color: #b4c2d7;
+  --boxL-shadow: -6px 6px 6px rgb(101 101 101 / 40%);
+  --boxR-shadow: 6px 6px 6px rgb(101 101 101 / 40%);
+  --box-shadow2: 8px 8px 6px rgb(101 101 101 / 40%);
+  --box-shadow3: 0 2px 6px rgb(101 101 101 / 40%);
 }
 *,
 *::before,
@@ -656,7 +656,7 @@ h2 {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
   gap: 1rem;
   position: relative;
 }
