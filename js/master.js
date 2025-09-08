@@ -112,7 +112,7 @@ VanillaTilt.init(document.querySelector('.hero-img'), {
 particlesJS('particles-js', {
   particles: {
     number: {
-      value: 50,
+      value: 40,
     },
     color: { value: '#1d7ddd' },
     shape: { type: 'circle' },
