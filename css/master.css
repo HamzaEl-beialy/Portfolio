@@ -3,21 +3,23 @@
 :root {
   --main-color: rgb(5 8 22);
   --btn-color: #1d7ddd;
-  --heading-color: #000000;
+  --heading-color: #919090;
   --text-color: #262626;
   --p-color: #ffffff;
   --background-color: linear-gradient(to right, #b5b5b5, #3f66a8);
+  --icons: #b5b5b5;
   --transition: all 0.8s ease-in-out;
-  --border-radius: 3rem;
+  --border-radius: 2rem;
   --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
   --boxR-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
   --box-shadow2: 15px 15px 15px rgba(0, 0, 0, 0.7);
   --box-shadow3: 0 3px 5px rgba(0, 0, 0, 0.7);
 }
 .dark-theme {
-  --background-color: linear-gradient(to right, black, #124365);
+  --background-color: linear-gradient(to right, #12161f, #103a57);
+  --icons: black;
   --text-color: #ffffff;
-  --heading-color: #b4c2d7;
+  --heading-color: #6b6b6b;
   --boxL-shadow: -6px 6px 6px rgb(101 101 101 / 40%);
   --boxR-shadow: 6px 6px 6px rgb(101 101 101 / 40%);
   --box-shadow2: 8px 8px 6px rgb(101 101 101 / 40%);
@@ -240,7 +242,7 @@ h2 {
 }
 .introduction-text .content h2 span {
   color: var(--btn-color);
-  -webkit-text-stroke: 3px var(--heading-color);
+  -webkit-text-stroke: 2px var(--heading-color);
 }
 .introduction-text p {
   font-size: 1.7rem;
@@ -429,7 +431,7 @@ h2 {
 .experience .heading {
   font-size: 3.5rem;
   color: var(--btn-color);
-  -webkit-text-stroke: 3px var(--heading-color);
+  -webkit-text-stroke: 2px var(--heading-color);
   margin-bottom: 2rem;
   display: inline-block;
   position: relative;
@@ -533,11 +535,11 @@ h2 {
   width: 2rem;
   display: flex;
   justify-content: center;
-  height: 2.5rem;
+  height: 2rem;
   align-items: center;
-  font-size: 2.8rem;
-  border-radius: 10px;
-  background: var(--background-color);
+  font-size: 2.5rem;
+  border-radius: 2rem;
+  background: var(--icons);
   color: var(--heading-color);
 }
 .experience .left::before,
@@ -645,7 +647,7 @@ h2 {
 .work .work-heading {
   font-size: 3.5rem;
   color: var(--btn-color);
-  -webkit-text-stroke: 3px var(--heading-color);
+  -webkit-text-stroke: 2px var(--heading-color);
   text-align: center;
   position: relative;
   display: inline-block;
