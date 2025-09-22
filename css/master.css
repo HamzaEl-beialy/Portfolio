@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 :root {
-  --main-color: rgb(5 8 22);
+  --main-color: rgb(0, 0, 0);
   --btn-color: #1d7ddd;
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
-  --background-color: linear-gradient(to right, #a7a7a8, #3f66a8);
-  --icons: #b5b5b5;
+  --background-color: linear-gradient(to right, #989aa8, #3f66a8);
+  --icons: #9e9e9e;
   --transition: all 0.8s ease-in-out;
   --border-radius: 2rem;
   --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
@@ -242,7 +242,7 @@ h2 {
 }
 .introduction-text .content h2 span {
   color: var(--btn-color);
-  -webkit-text-stroke: 2px var(--heading-color);
+  -webkit-text-stroke: 1px var(--heading-color);
 }
 .introduction-text p {
   font-size: 1.7rem;
@@ -308,9 +308,9 @@ h2 {
   display: inline-block;
 }
 .social-icons a {
-  font-size: 3rem;
+  font-size: 3.3rem;
   display: inline-block;
-  line-height: 4rem;
+  line-height: 1.25;
   color: var(--btn-color);
   background-color: var(--main-color);
   width: 4rem;
@@ -377,7 +377,7 @@ h2 {
     padding-top: 20%;
   }
   .introduction-text .content h2 {
-    font-size: 2.9rem;
+    font-size: 2.7rem;
   }
   .tilt-wrapper {
     position: relative;
@@ -389,6 +389,17 @@ h2 {
   }
   .introduction-text .about-btn {
     justify-content: center;
+  }
+  .introduction-text .btn,
+  .introduction-text .btn2 {
+    font-size: 1rem;
+    width: 8rem;
+  }
+  .social-icons a {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    width: 3.2rem;
+    height: 3.2rem;
   }
 }
 @media (max-width: 480px) {
@@ -408,10 +419,9 @@ h2 {
   .introduction-text .btn2 {
     font-size: 0.8rem;
     width: 5.5rem;
-    padding: 0.7rem 0.1rem;
   }
   .social-icons a {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     line-height: 2.5rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -1125,7 +1135,7 @@ form .button-area {
     font-size: 1.8rem;
   }
   .introduction-text .content h2 span {
-    -webkit-text-stroke: 1.5px var(--heading-color);
+    -webkit-text-stroke: 1px var(--heading-color);
   }
   .experience .tag,
   .work .project .project-text h2,
