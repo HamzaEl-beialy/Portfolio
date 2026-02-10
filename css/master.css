@@ -113,7 +113,7 @@ h2 {
 }
 .header-area .links-container {
   position: fixed;
-  right: 10%;
+  right: 5%;
   top: 1.9rem;
   display: flex;
   align-items: flex-end;
@@ -128,7 +128,7 @@ h2 {
 }
 .header-area .links li {
   display: inline-block;
-  margin-left: 0.8rem;
+  margin-left: 0.5rem;
 }
 .header-area .links li a {
   color: var(--btn-color);
@@ -523,7 +523,8 @@ h2 {
 }
 .experience .container.left .content,
 .experience .container.right .content,
-.work .project {
+.work .project,
+.review-card {
   background: var(--main-color);
   box-shadow: var(--boxR-shadow);
 }
@@ -581,7 +582,8 @@ h2 {
   padding: 1.2rem;
 }
 .experience .tag,
-.work .project .project-text h2 {
+.work .project .project-text h2,
+.review-card h3 {
   font-size: 1.2rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -591,6 +593,7 @@ h2 {
   padding: 0 1rem 1rem 1rem;
 }
 .experience .desc p,
+.review-card p,
 .work .project-text p {
   color: var(--p-color);
   font-family: 'Nunito', sans-serif;
@@ -607,16 +610,19 @@ h2 {
   font-size: 1.7rem;
   font-family: 'Nunito', sans-serif;
 }
-.morebtn .btn i {
+.morebtn .btn i,
+.review-form button.btn i {
   margin-left: 0.3rem;
   font-size: 1.5rem;
   transition: 0.3s;
 }
-.morebtn .btn:hover {
+.morebtn .btn:hover,
+.review-form button.btn:hover {
   background: var(--btn-color);
   color: var(--main-color);
 }
-.morebtn .btn:hover i {
+.morebtn .btn:hover i,
+.review-form button.btn:hover i {
   transform: translateX(5px);
 }
 @media (max-width: 870px) {
@@ -654,7 +660,8 @@ h2 {
   transition: var(--transition);
 }
 .contact h2,
-.work .work-heading {
+.work .work-heading,
+.reviews .heading {
   font-size: 3.5rem;
   color: var(--btn-color);
   -webkit-text-stroke: 1px var(--heading-color);
@@ -735,7 +742,8 @@ h2 {
   }
 }
 /* End Work */
-.contact {
+.contact,
+.reviews {
   height: 45rem;
   background-image: url(../imgs/contact.png);
   background-size: contain;
@@ -764,7 +772,7 @@ h2 {
   top: 22%;
 }
 .contact .contact-pic img {
-  width: 19rem;
+  width: 17rem;
 }
 .contact .contact-form {
   position: absolute;
@@ -778,7 +786,8 @@ form .form-group {
   flex-direction: column;
   justify-content: center;
 }
-.form-group .field {
+.form-group .field,
+.review-form .field {
   height: 3.5rem;
   display: flex;
   position: relative;
@@ -795,7 +804,9 @@ form i {
   transform: translateY(-50%);
 }
 form .field input,
-form .message textarea {
+form .message textarea,
+.review-form input,
+.review-form textarea {
   width: 100%;
   height: 100%;
   outline: none;
@@ -808,11 +819,15 @@ form .message textarea {
   background: #0f60b1c9;
 }
 .field input::placeholder,
-.message textarea::placeholder {
+.message textarea::placeholder,
+.review-form input::placeholder,
+.review-form textarea::placeholder {
   color: var(--main-color);
 }
 .field input:focus,
-.message textarea:focus {
+.message textarea:focus,
+.review-form input:focus,
+.review-form textarea:focus {
   padding-left: 3.7rem;
   border: 2px solid var(--main-color);
 }
@@ -830,7 +845,8 @@ form .message i {
   top: 2rem;
   left: 1.2rem;
 }
-form .message textarea {
+form .message textarea,
+.review-form textarea {
   min-height: 8rem;
   padding: 1rem 0 0 3.5rem;
 }
@@ -841,7 +857,8 @@ form .button-area {
   float: right;
 }
 .button-area button,
-.morebtn .btn {
+.morebtn .btn,
+.review-form button.btn {
   color: var(--btn-color);
   border: none;
   outline: none;
@@ -888,6 +905,75 @@ form .button-area {
     min-height: 45rem;
   }
 }
+/* Start Reviews */
+.reviews .container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  transition: var(--transition);
+}
+.review-card {
+  padding: 1rem;
+  max-width: 15rem;
+  min-width: 10rem;
+  max-height: 11rem;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.review-card p {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.review-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: row-reverse;
+  scroll-behavior: smooth;
+  gap: 0.7rem;
+  padding: 1rem;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+.review-form {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.review-card h3 i,
+.idea-card i {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+.review-form button.btn {
+  position: relative;
+  margin-top: 5rem;
+  float: right;
+}
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  overflow: hidden;
+}
+.review-list::-webkit-scrollbar {
+  display: none;
+}
+.scroll-btn {
+  background-color: var(--main-color, #555);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  border-radius: 1.2rem;
+}
+/* End Reviews */
 .footer {
   position: relative;
   background: black;
@@ -997,7 +1083,8 @@ form .button-area {
 .about-me h2::before,
 .experience .heading::before,
 .work .work-heading::before,
-.contact h2::before {
+.contact h2::before,
+.reviews h2::before {
   content: '';
   position: absolute;
   height: 5px;
