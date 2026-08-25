@@ -12,15 +12,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/master.css" />
   </head>
   <body>
@@ -42,7 +39,7 @@
             <li><a href="#" data-section=".experience">Skills</a></li>
             <li><a href="#" data-section=".work">Work</a></li>
             <li><a href="#" data-section=".contact">Contact</a></li>
-            <!-- <li><a href="#" data-section=".reviews">Reviews</a></li> -->
+            <li><a href="#" data-section=".reviews">Reviews</a></li>
           </ul>
         </nav>
         <div class="theme-btn">
@@ -73,7 +70,7 @@
                 <span>About</span>
                 <i class="fas fa-arrow-circle-down"></i>
               </a>
-              <a href="./imgs/Hamza_Elbeialy_CV.docx.pdf" class="btn2">
+              <a href="./imgs/CV.pdf" class="btn2">
                 <span>CV</span>
                 <i class="fa-solid fa-file"></i>
               </a>
@@ -314,11 +311,10 @@
     </section>
     <!-- Contact Section -->
     <section class="contact" id="contact">
-      <div class="overlay"></div>
       <div
         class="container"
         id="contact-form"
-        data-aos="fade-up"
+        data-aos="fade-down"
         data-aos-duration="4000"
         data-aos-delay="200"
       >
@@ -364,6 +360,43 @@
       </div>
     </section>
     <!-- Start Reviews-->
+    <section class="reviews">
+      <div
+        class="container"
+        id="reviews"
+        data-aos="fade-up"
+        data-aos-duration="4000"
+        data-aos-delay="200"
+      >
+        <h2 class="heading">Reviews</h2>
+        <div class="revs"></div>
+        <div class="reviews-pic">
+          <img src="./imgs/rev.png" alt="Contact" />
+        </div>
+        <form id="reviewForm">
+          <div class="revForm">
+            <div class="field">
+              <input type="text" id="reviewName" placeholder="Name" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="message">
+              <textarea
+                name="message"
+                id="reviewMessage"
+                placeholder="Enter your review"
+                required
+              ></textarea>
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="button-area">
+              <button type="submit">
+                Submit <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <!-- End Reviews-->
     <!-- Footer -->
     <footer class="footer">
@@ -424,6 +457,8 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script type="module" src="js/master.js"></script>
+    <script type="module" src="js/reviews.js"></script>
+    <script type="module" src="js/firebase.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

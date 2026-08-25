@@ -1,81 +1,81 @@
 // ========== Smooth Scroll for Links ==========
-const allLinks = document.querySelectorAll('.links a');
+const allLinks = document.querySelectorAll(".links a");
 
 function scrollToSomewhere(elements) {
   elements.forEach((ele) => {
-    ele.addEventListener('click', (e) => {
+    ele.addEventListener("click", (e) => {
       e.preventDefault();
       const targetSelector =
-        e.target.dataset.section || e.target.getAttribute('href');
+        e.target.dataset.section || e.target.getAttribute("href");
       const target = document.querySelector(targetSelector);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: "smooth" });
       }
-      toggleBtn?.classList.remove('active');
-      linksContainer?.classList.remove('active');
-      allLinks.forEach((link) => link.classList.remove('active'));
-      e.target.classList.add('active');
+      toggleBtn?.classList.remove("active");
+      linksContainer?.classList.remove("active");
+      allLinks.forEach((link) => link.classList.remove("active"));
+      e.target.classList.add("active");
     });
   });
 }
 scrollToSomewhere(allLinks);
 // ========== Scroll To Top Button ==========
-const scrollTopBtn = document.getElementById('scroll-top');
-window.addEventListener('scroll', () => {
-  scrollTopBtn.classList.toggle('active', window.scrollY > 100);
+const scrollTopBtn = document.getElementById("scroll-top");
+window.addEventListener("scroll", () => {
+  scrollTopBtn.classList.toggle("active", window.scrollY > 100);
 });
 
 // Dark Theme
-const themeBtn = document.querySelector('.theme-btn');
+const themeBtn = document.querySelector(".theme-btn");
 
 // Check saved theme on load
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-theme');
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-theme");
   // Dark mode → Moon active
-  themeBtn?.querySelector('span.moon')?.classList.add('active');
-  themeBtn?.querySelector('span.sun')?.classList.remove('active');
+  themeBtn?.querySelector("span.moon")?.classList.add("active");
+  themeBtn?.querySelector("span.sun")?.classList.remove("active");
 } else {
-  document.body.classList.remove('dark-theme');
+  document.body.classList.remove("dark-theme");
   // Light mode → Sun active
-  themeBtn?.querySelector('span.sun')?.classList.add('active');
-  themeBtn?.querySelector('span.moon')?.classList.remove('active');
+  themeBtn?.querySelector("span.sun")?.classList.add("active");
+  themeBtn?.querySelector("span.moon")?.classList.remove("active");
 }
 
 // Toggle theme on button click
-themeBtn?.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
+themeBtn?.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
 
-  const isDark = document.body.classList.contains('dark-theme');
+  const isDark = document.body.classList.contains("dark-theme");
 
   if (isDark) {
-    localStorage.setItem('theme', 'dark');
+    localStorage.setItem("theme", "dark");
     // Dark mode → Moon active
-    themeBtn.querySelector('span.moon')?.classList.add('active');
-    themeBtn.querySelector('span.sun')?.classList.remove('active');
+    themeBtn.querySelector("span.moon")?.classList.add("active");
+    themeBtn.querySelector("span.sun")?.classList.remove("active");
   } else {
-    localStorage.setItem('theme', 'light');
+    localStorage.setItem("theme", "light");
     // Light mode → Sun active
-    themeBtn.querySelector('span.sun')?.classList.add('active');
-    themeBtn.querySelector('span.moon')?.classList.remove('active');
+    themeBtn.querySelector("span.sun")?.classList.add("active");
+    themeBtn.querySelector("span.moon")?.classList.remove("active");
   }
 });
 
 // ========== Mobile Menu ==========
-const toggleBtn = document.querySelector('.header-area .toggle-menu');
-const linksContainer = document.querySelector('.header-area .links-container');
+const toggleBtn = document.querySelector(".header-area .toggle-menu");
+const linksContainer = document.querySelector(".header-area .links-container");
 if (toggleBtn && linksContainer) {
-  toggleBtn.addEventListener('click', () => {
-    toggleBtn.classList.toggle('active');
-    linksContainer.classList.toggle('active');
+  toggleBtn.addEventListener("click", () => {
+    toggleBtn.classList.toggle("active");
+    linksContainer.classList.toggle("active");
   });
 }
 // animation for typing effect
 const textArray = [
-  'Front-End Development',
-  'React.js & UI/UX Design',
-  'Building with HTML, CSS & JavaScript',
-  'Photoshop & Visual Design',
-  'Exploring Backend Development',
+  "Web Design & Development",
+  "Using New Framworks & Libraries",
+  "Java & UI/UX Design",
+  "Building Visual & Creative Design",
+  "Using AI Tools",
 ];
 
 let i = 0;
@@ -84,7 +84,7 @@ let isDeleting = false;
 let speed = 120;
 
 function typeEffect() {
-  const typingElement = document.getElementById('typing');
+  const typingElement = document.getElementById("typing");
   const currentText = textArray[i];
 
   if (!isDeleting) {
@@ -104,25 +104,25 @@ function typeEffect() {
   setTimeout(typeEffect, isDeleting ? 60 : speed);
 }
 typeEffect();
-VanillaTilt.init(document.querySelector('.hero-img'), {
+VanillaTilt.init(document.querySelector(".hero-img"), {
   max: 10,
   speed: 300,
   glare: false,
 });
-particlesJS('particles-js', {
+particlesJS("particles-js", {
   particles: {
     number: {
       value: 40,
     },
-    color: { value: '#1d7ddd' },
-    shape: { type: 'circle' },
+    color: { value: "#1d7ddd" },
+    shape: { type: "circle" },
     opacity: { value: 0.8 },
     size: { value: 4, random: true },
     move: { enable: true, speed: 2 },
   },
   interactivity: {
     events: {
-      onhover: { enable: true, mode: 'repulse' },
+      onhover: { enable: true, mode: "repulse" },
     },
   },
 });
@@ -131,31 +131,31 @@ function updateAOS() {
     for (let i = 1; i <= 6; i++) {
       const el = document.getElementById(`cont${i}`);
       if (el) {
-        el.setAttribute('data-aos', 'fade-down-right');
+        el.setAttribute("data-aos", "fade-down-right");
       }
     }
   } else {
     document
-      .getElementById('cont1')
-      ?.setAttribute('data-aos', 'fade-down-right');
+      .getElementById("cont1")
+      ?.setAttribute("data-aos", "fade-down-right");
     document
-      .getElementById('cont2')
-      ?.setAttribute('data-aos', 'fade-down-left');
+      .getElementById("cont2")
+      ?.setAttribute("data-aos", "fade-down-left");
     document
-      .getElementById('cont3')
-      ?.setAttribute('data-aos', 'fade-down-right');
+      .getElementById("cont3")
+      ?.setAttribute("data-aos", "fade-down-right");
     document
-      .getElementById('cont4')
-      ?.setAttribute('data-aos', 'fade-down-left');
+      .getElementById("cont4")
+      ?.setAttribute("data-aos", "fade-down-left");
     document
-      .getElementById('cont5')
-      ?.setAttribute('data-aos', 'fade-down-right');
+      .getElementById("cont5")
+      ?.setAttribute("data-aos", "fade-down-right");
     document
-      .getElementById('cont6')
-      ?.setAttribute('data-aos', 'fade-down-left');
+      .getElementById("cont6")
+      ?.setAttribute("data-aos", "fade-down-left");
   }
 
   AOS.refresh();
 }
-window.addEventListener('load', updateAOS);
-window.addEventListener('resize', updateAOS);
+window.addEventListener("load", updateAOS);
+window.addEventListener("resize", updateAOS);

@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 :root {
   --main-color: rgb(0, 0, 0);
-  --btn-color: #1d7ddd;
+  --btn-color: #106bc6;
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
-  --background-color: linear-gradient(to right, #98a3a8, #3f66a8);
-  --icons: #9e9e9e;
+  --background-color: linear-gradient(to right, #7093a3, #1f3f72);
   --transition: all 0.8s ease-in-out;
   --border-radius: 2rem;
   --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
@@ -16,14 +15,13 @@
   --box-shadow3: 0 3px 5px rgba(0, 0, 0, 0.7);
 }
 .dark-theme {
-  --background-color: linear-gradient(to left, #041623, #103c61);
-  --icons: black;
-  --text-color: #ffffff;
-  --heading-color: #7d7c7c;
-  --boxL-shadow: -6px 6px 6px rgb(60, 83, 112);
-  --boxR-shadow: 6px 6px 6px rgb(60, 83, 112);
-  --box-shadow2: 8px 8px 6px rgb(60, 83, 112);
-  --box-shadow3: 0 2px 6px rgb(60, 83, 112);
+  --background-color: linear-gradient(to left, #022132, #00315c);
+  --text-color: white;
+  --heading-color: #dddcdc;
+  --boxL-shadow: -6px 6px 6px #6868684d;
+  --boxR-shadow: 6px 6px 6px #6868684d;
+  --box-shadow2: 8px 8px 6px #6868684d;
+  --box-shadow3: 0 2px 6px #6868684d;
 }
 *,
 *::before,
@@ -35,7 +33,7 @@
   outline: none;
   border: none;
   text-transform: none;
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
 }
 * {
   scrollbar-width: thin;
@@ -47,7 +45,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: var(--background-color);
   overflow-x: hidden;
   transition: var(--transition);
@@ -80,10 +78,10 @@ h2 {
 }
 .header-area .theme-btn {
   position: absolute;
-  top: 0.7rem;
+  top: 0.6rem;
   display: flex;
   align-items: center;
-  left: calc(50% - 2.5rem);
+  right: 27rem;
   background: #8090ab;
   width: 5rem;
   height: 2.2rem;
@@ -113,7 +111,7 @@ h2 {
 }
 .header-area .links-container {
   position: fixed;
-  right: 5%;
+  right: 10%;
   top: 1.9rem;
   display: flex;
   align-items: flex-end;
@@ -140,14 +138,14 @@ h2 {
   text-decoration: none;
 }
 .header-area .links li a::before {
-  content: '';
+  content: "";
   position: absolute;
-  height: 4px;
-  width: 4.2rem;
+  height: 3px;
+  width: 4.5rem;
   border-radius: var(--border-radius);
   background-color: var(--btn-color);
-  bottom: -23px;
-  left: 50%;
+  bottom: -0.5rem;
+  left: 53%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   transition: 0.3s ease;
@@ -180,11 +178,14 @@ h2 {
 @media (max-width: 870px) {
   .header-area .toggle-menu {
     position: absolute;
-    cursor: pointer;
     width: 2.4rem;
     height: 2.5rem;
     top: 0.6rem;
     right: 0;
+    cursor: pointer;
+  }
+  .header-area .theme-btn {
+    right: calc(50% - 2.5rem);
   }
   .header-area .links-container {
     width: 100%;
@@ -213,7 +214,7 @@ h2 {
 .home-page {
   position: relative;
   width: 100%;
-  height: 97vh;
+  height: 50rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -231,11 +232,7 @@ h2 {
   width: 60%;
   z-index: 1;
 }
-.introduction-text h2,
-.about-me h2,
-.experience .heading,
-.work .work-heading,
-.contact h2 {
+.introduction-text h2 {
   font-size: 3.4rem;
   line-height: 0.9;
   color: var(--heading-color);
@@ -269,7 +266,7 @@ h2 {
   color: var(--btn-color);
   background: var(--main-color);
   box-shadow: var(--box-shadow3);
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
   font-weight: bold;
 }
@@ -364,12 +361,14 @@ h2 {
   }
 }
 @media (max-width: 870px) {
+  .home-page {
+    height: 70rem;
+  }
   .home-page .container {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 2rem;
-    height: auto;
     text-align: center;
   }
   #home {
@@ -429,16 +428,18 @@ h2 {
 }
 /* End Home Page */
 .about-me {
-  padding-top: 3rem;
   text-align: center;
-  min-height: 75vh;
+  height: 40rem;
 }
 .about-me .container {
   width: 80%;
   margin: 0 auto;
 }
 .about-me h2,
-.experience .heading {
+.experience .heading,
+.reviews h2,
+.contact h2,
+.work .work-heading {
   font-size: 3.5rem;
   color: var(--btn-color);
   -webkit-text-stroke: 1px var(--heading-color);
@@ -460,15 +461,17 @@ h2 {
 }
 .info-box {
   flex: 1 1 50%;
-  /* transition: var(--transition); */
 }
 .info-box p {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   line-height: 1.4;
   color: var(--text-color);
 }
 @media (max-width: 870px) {
+  .about-me {
+    min-height: 55rem;
+  }
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -499,7 +502,7 @@ h2 {
   margin: 0 auto;
 }
 .experience .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0.8rem;
   height: 100%;
@@ -524,7 +527,7 @@ h2 {
 .experience .container.left .content,
 .experience .container.right .content,
 .work .project,
-.review-card {
+.reviews .revBox {
   background: var(--main-color);
   box-shadow: var(--boxR-shadow);
 }
@@ -548,14 +551,14 @@ h2 {
   justify-content: center;
   height: 2rem;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   border-radius: 2rem;
-  background: var(--icons);
+  background: var(--btn-color);
   color: var(--heading-color);
 }
 .experience .left::before,
 .experience .right::before {
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -583,7 +586,7 @@ h2 {
 }
 .experience .tag,
 .work .project .project-text h2,
-.review-card h3 {
+.reviews .revBox h3 {
   font-size: 1.2rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -593,11 +596,12 @@ h2 {
   padding: 0 1rem 1rem 1rem;
 }
 .experience .desc p,
-.review-card p,
-.work .project-text p {
+.work .project-text p,
+.reviews .revBox p {
   color: var(--p-color);
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   line-height: 1;
+  font-size: 1.2rem;
   text-align: center;
 }
 .morebtn {
@@ -608,21 +612,18 @@ h2 {
 .morebtn .btn span {
   font-weight: 600;
   font-size: 1.7rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
-.morebtn .btn i,
-.review-form button.btn i {
+.morebtn .btn i {
   margin-left: 0.3rem;
   font-size: 1.5rem;
   transition: 0.3s;
 }
-.morebtn .btn:hover,
-.review-form button.btn:hover {
+.morebtn .btn:hover {
   background: var(--btn-color);
   color: var(--main-color);
 }
-.morebtn .btn:hover i,
-.review-form button.btn:hover i {
+.morebtn .btn:hover i {
   transform: translateX(5px);
 }
 @media (max-width: 870px) {
@@ -658,16 +659,6 @@ h2 {
   min-height: 70vh;
   text-align: center;
   transition: var(--transition);
-}
-.contact h2,
-.work .work-heading,
-.reviews .heading {
-  font-size: 3.5rem;
-  color: var(--btn-color);
-  -webkit-text-stroke: 1px var(--heading-color);
-  text-align: center;
-  position: relative;
-  display: inline-block;
 }
 .contact h2 {
   margin-top: 2.2rem;
@@ -720,7 +711,7 @@ h2 {
 
 @media (max-width: 867px) {
   .work {
-    min-height: 90vh;
+    min-height: 100vh;
   }
   .work .project {
     width: calc(50% - 1rem);
@@ -730,6 +721,9 @@ h2 {
   }
 }
 @media (max-width: 500px) {
+  .work {
+    min-height: 135vh;
+  }
   .work .work-container {
     flex-direction: column;
     align-items: center;
@@ -742,21 +736,14 @@ h2 {
   }
 }
 /* End Work */
-.contact,
-.reviews {
+/* Start Contact */
+.contact {
   height: 45rem;
   background-image: url(../imgs/contact.png);
   background-size: contain;
   background-position: center;
   text-align: center;
   position: relative;
-}
-.contact .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 .contact .container {
   position: absolute;
@@ -769,16 +756,15 @@ h2 {
 #contactLeft {
   width: 40%;
   position: absolute;
-  top: 22%;
+  top: 25%;
 }
 .contact .contact-pic img {
-  width: 17rem;
+  width: 18rem;
 }
 .contact .contact-form {
   position: absolute;
   right: 0;
   top: 20%;
-  margin-right: 3%;
   width: 60%;
 }
 form .form-group {
@@ -787,11 +773,11 @@ form .form-group {
   justify-content: center;
 }
 .form-group .field,
-.review-form .field {
+.revForm .field {
   height: 3.5rem;
   display: flex;
   position: relative;
-  margin: 0.5rem 1rem;
+  margin-top: 1rem;
   width: 100%;
 }
 form i {
@@ -804,32 +790,30 @@ form i {
   transform: translateY(-50%);
 }
 form .field input,
-form .message textarea,
-.review-form input,
-.review-form textarea {
+form .message textarea {
   width: 100%;
   height: 100%;
   outline: none;
   padding: 0 1rem 0 3rem;
   font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 10px;
   border: 1px solid var(--main-color);
   color: var(--main-color);
-  background: #0f60b1c9;
+  background: var(--btn-color);
 }
 .field input::placeholder,
-.message textarea::placeholder,
-.review-form input::placeholder,
-.review-form textarea::placeholder {
+.message textarea::placeholder {
   color: var(--main-color);
 }
 .field input:focus,
-.message textarea:focus,
-.review-form input:focus,
-.review-form textarea:focus {
-  padding-left: 3.7rem;
+.message textarea:focus {
+  padding-left: 3.5rem;
   border: 2px solid var(--main-color);
+}
+.message textarea:focus {
+  padding-left: 4rem;
+  padding-bottom: 6rem;
 }
 .field input:focus ~ i,
 .message textarea:focus ~ i {
@@ -837,7 +821,7 @@ form .message textarea,
 }
 form .message {
   position: relative;
-  margin: 0.5rem 1rem;
+  margin-top: 1rem;
   width: 100%;
 }
 form .message i {
@@ -845,10 +829,9 @@ form .message i {
   top: 2rem;
   left: 1.2rem;
 }
-form .message textarea,
-.review-form textarea {
+form .message textarea {
   min-height: 8rem;
-  padding: 1rem 0 0 3.5rem;
+  padding: 1rem 3.5rem;
 }
 form .message textarea::-webkit-scrollbar {
   width: 0;
@@ -857,8 +840,7 @@ form .button-area {
   float: right;
 }
 .button-area button,
-.morebtn .btn,
-.review-form button.btn {
+.morebtn .btn {
   color: var(--btn-color);
   border: none;
   outline: none;
@@ -869,7 +851,7 @@ form .button-area {
   background: var(--main-color);
   box-shadow: var(--box-shadow3);
   transition: 0.3s ease;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .button-area button:hover {
   background: var(--btn-color);
@@ -893,7 +875,8 @@ form .button-area {
   color: var(--main-color);
 }
 @media (max-width: 870px) {
-  #contactLeft {
+  #contactLeft,
+  .reviews-pic {
     opacity: 0;
   }
   .contact .contact-form {
@@ -905,7 +888,17 @@ form .button-area {
     min-height: 45rem;
   }
 }
+/* End Contact */
 /* Start Reviews */
+.reviews {
+  height: 50rem;
+  background-image: url(../imgs/contact.png);
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+}
 .reviews .container {
   position: absolute;
   top: 0;
@@ -914,64 +907,76 @@ form .button-area {
   height: 100%;
   transition: var(--transition);
 }
-.review-card {
-  padding: 1rem;
-  max-width: 15rem;
-  min-width: 10rem;
-  max-height: 11rem;
-  scrollbar-width: none;
-  overflow-y: scroll;
-}
-.review-card p {
-  font-size: 0.8rem;
-  line-height: 1;
-}
-.review-list {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  flex-direction: row-reverse;
-  scroll-behavior: smooth;
-  gap: 0.7rem;
-  padding: 1rem;
-  max-width: 100%;
-  scrollbar-width: none;
-}
-.review-form {
-  max-width: 40rem;
-  margin: 0 auto;
-}
-.review-card h3 i,
-.idea-card i {
-  font-size: 1.2rem;
-  color: white;
-  margin-right: 0.5rem;
-}
-.review-form button.btn {
-  position: relative;
-  margin-top: 5rem;
-  float: right;
-}
-.scroll-container {
+.revs {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120%;
-  left: -10%;
   position: relative;
-  overflow: hidden;
+  height: 12rem;
+  overflow: scroll;
+  scrollbar-width: none;
 }
-.review-list::-webkit-scrollbar {
-  display: none;
+.revs .revBox .account-pic {
+  position: absolute;
+  display: flex;
+  width: 3rem;
+  border-radius: 50%;
+  margin: -1.5rem 0rem;
 }
-.scroll-btn {
-  background-color: var(--main-color, #555);
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  padding: 0.5rem 0.7rem;
-  cursor: pointer;
-  border-radius: 1.2rem;
+.revs .revBox {
+  display: flex;
+  color: var(--btn-color);
+  border-radius: var(--border-radius);
+  height: 83%;
+  margin: 0 0.5rem;
+  align-items: center;
+  min-width: 20rem;
+  max-width: 20rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.reviews .revBox h3 {
+  padding-top: 1.7rem;
+  margin-bottom: 0.5rem;
+  overflow: scroll;
+  max-height: 40%;
+  scrollbar-width: none;
+  line-height: 1;
+}
+.reviews .revBox p {
+  overflow: scroll;
+  scrollbar-width: none;
+  max-width: 18rem;
+  line-break: anywhere;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.reviews-pic {
+  width: 40%;
+  position: absolute;
+  top: 35%;
+}
+.reviews .reviews-pic img {
+  width: 20rem;
+}
+.reviews .revForm {
+  position: absolute;
+  right: 0;
+  top: 42%;
+  width: 60%;
+}
+@media (max-width: 870px) {
+  .reviewsLeft {
+    opacity: 0;
+  }
+  .reviews .revForm {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .reviews {
+    min-height: 45rem;
+  }
 }
 /* End Reviews */
 .footer {
@@ -979,7 +984,7 @@ form .button-area {
   background: black;
   width: 100%;
   height: 42rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .footer .box-container {
   display: flex;
@@ -1085,7 +1090,7 @@ form .button-area {
 .work .work-heading::before,
 .contact h2::before,
 .reviews h2::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 5px;
   width: 0%;
@@ -1145,7 +1150,7 @@ form .button-area {
   pointer-events: none;
 }
 .scroll .tooltip::before {
-  content: '';
+  content: "";
   border-style: solid;
   border-width: 10px;
   border-color: transparent transparent transparent var(--main-color);
