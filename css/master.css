@@ -334,31 +334,41 @@ h2 {
 }
 .home-page .tilt-wrapper img.animated-tilt,
 .about-image img.animated-tilt {
-  animation: floatTilt 8s ease-in-out infinite;
+  animation: floatTilt 7s ease-in-out infinite;
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
 @keyframes floatTilt {
   0% {
-    transform: perspective(1000px) translateY(0) translateZ(0) rotateX(0deg)
+    transform: perspective(1200px) translate3d(0, 0, 0) rotateX(0deg)
       rotateY(0deg) scale(1);
   }
+
   25% {
-    transform: perspective(1000px) translateY(-0.8rem) translateZ(6px)
-      rotateX(1.2deg) rotateY(1deg) scale(1.015);
+    transform: perspective(1200px) translate3d(0.25rem, -1.2rem, 8px)
+      rotateX(1deg) rotateY(0.8deg) scale(1.07);
   }
+
   50% {
-    transform: perspective(1000px) translateY(0.4rem) translateZ(-4px)
-      rotateX(-1.2deg) rotateY(-1.2deg) scale(0.99);
+    transform: perspective(1200px) translate3d(-0.25rem, 0, 0) rotateX(0deg)
+      rotateY(-0.8deg) scale(0.94);
   }
+
   75% {
-    transform: perspective(1000px) translateY(-0.6rem) translateZ(5px)
-      rotateX(1deg) rotateY(-1.2deg) scale(1.01);
+    transform: perspective(1200px) translate3d(0.25rem, 1.2rem, 8px)
+      rotateX(-1deg) rotateY(0.8deg) scale(1.07);
   }
+
   100% {
-    transform: perspective(1000px) translateY(0) translateZ(0) rotateX(0deg)
+    transform: perspective(1200px) translate3d(0, 0, 0) rotateX(0deg)
       rotateY(0deg) scale(1);
   }
+}
+
+.your-element {
+  animation: floatTilt 6s linear infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 @media (max-width: 870px) {
   .home-page {
@@ -927,7 +937,7 @@ form .button-area {
   display: flex;
   color: var(--btn-color);
   border-radius: var(--border-radius);
-  height: 83%;
+  height: 79%;
   margin: 0 0.5rem;
   align-items: center;
   min-width: 20rem;
@@ -976,6 +986,9 @@ form .button-area {
 @media (max-width: 500px) {
   .reviews {
     min-height: 45rem;
+  }
+  .revs .revBox {
+    min-width: 12rem;
   }
 }
 /* End Reviews */
@@ -1039,8 +1052,8 @@ form .button-area {
 .footer .credit {
   position: absolute;
   width: 100%;
-  top: calc(100% - 2.5rem);
-  height: 2.5rem;
+  top: calc(100% - 3rem);
+  height: 3rem;
   padding-top: 0.8%;
   text-align: center;
   background: var(--btn-color);
