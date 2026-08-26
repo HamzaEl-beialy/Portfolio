@@ -51,7 +51,7 @@ body {
   transition: var(--transition);
 }
 h2 {
-  line-height: 0.8;
+  line-height: 1;
 }
 .header-area {
   position: fixed;
@@ -81,7 +81,7 @@ h2 {
   top: 0.6rem;
   display: flex;
   align-items: center;
-  right: 27rem;
+  right: 30rem;
   background: #8090ab;
   width: 5rem;
   height: 2.2rem;
@@ -126,7 +126,7 @@ h2 {
 }
 .header-area .links li {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .header-area .links li a {
   color: var(--btn-color);
@@ -231,10 +231,10 @@ h2 {
 #home {
   width: 60%;
   z-index: 1;
+  line-height: 1;
 }
 .introduction-text h2 {
   font-size: 3.4rem;
-  line-height: 0.9;
   color: var(--heading-color);
 }
 .introduction-text .content h2 span {
@@ -243,15 +243,14 @@ h2 {
 }
 .introduction-text p {
   font-size: 1.7rem;
-  line-height: 0.9;
   min-height: 3rem;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
   font-style: italic;
   color: var(--text-color);
   font-weight: 600;
 }
 .introduction-text .about-btn {
-  margin: 0.9rem 0;
+  margin-bottom: 1rem;
   display: flex;
   gap: 0.8rem;
 }
@@ -303,18 +302,19 @@ h2 {
 }
 .socials .social-icons li {
   display: inline-block;
+  margin-right: 0.3rem;
 }
 .social-icons a {
   font-size: 3.3rem;
-  display: inline-block;
-  line-height: 1.25;
   color: var(--btn-color);
   background-color: var(--main-color);
   width: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 4rem;
   text-align: center;
   border-radius: 30%;
-  transition: 0.3s;
   box-shadow: var(--box-shadow3);
 }
 .social-icons a:hover {
