@@ -71,10 +71,10 @@ h2 {
 .header-area .logo {
   left: 0;
   position: absolute;
-  top: 0;
+  top: -0.3rem;
 }
 .header-area .logo img {
-  width: 3rem;
+  width: 4rem;
 }
 .header-area .theme-btn {
   position: absolute;
