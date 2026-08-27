@@ -254,8 +254,7 @@ h2 {
   display: flex;
   gap: 0.8rem;
 }
-.introduction-text .btn,
-.introduction-text .btn2 {
+.introduction-text .btn {
   padding: 0.9rem 0.11rem;
   width: 9rem;
   text-align: center;
@@ -269,13 +268,11 @@ h2 {
   cursor: pointer;
   font-weight: bold;
 }
-.introduction-text .btn:hover,
-.introduction-text .btn2:hover {
+.introduction-text .btn:hover {
   background: var(--btn-color);
   color: var(--main-color);
 }
-.introduction-text .btn:hover i,
-.introduction-text .btn2:hover i {
+.introduction-text .btn:hover i {
   transform: translateX(5px);
 }
 #typing {
@@ -399,8 +396,7 @@ h2 {
   .introduction-text .about-btn {
     justify-content: center;
   }
-  .introduction-text .btn,
-  .introduction-text .btn2 {
+  .introduction-text .btn {
     font-size: 1rem;
     width: 8rem;
   }
@@ -424,8 +420,7 @@ h2 {
   .introduction-text .content p {
     font-size: 1.2rem;
   }
-  .introduction-text .btn,
-  .introduction-text .btn2 {
+  .introduction-text .btn {
     font-size: 0.8rem;
     width: 5.5rem;
   }
