@@ -321,15 +321,14 @@ h2 {
 .tilt-wrapper {
   position: absolute;
   right: 0;
+  width: 21rem;
 }
-.tilt-wrapper img,
-.about-image img {
-  max-width: 21rem;
-  width: 100%;
+.tilt-wrapper img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow2);
+  width: 100%;
 }
-.home-page .tilt-wrapper img.animated-tilt,
+.home-page .tilt-wrapper .animated-tilt,
 .about-image img.animated-tilt {
   animation: floatTilt 7s ease-in-out infinite;
   transform-style: preserve-3d;
@@ -454,6 +453,10 @@ h2 {
 }
 .about-image img {
   flex: 1 1 40%;
+  max-width: 21rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow2);
 }
 .about-content {
   display: flex;
