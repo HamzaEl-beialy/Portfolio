@@ -40,7 +40,6 @@
   scrollbar-color: var(--btn-color) var(--main-color);
 }
 html {
-  font-size: 90%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -81,7 +80,7 @@ h2 {
   top: 0.6rem;
   display: flex;
   align-items: center;
-  right: 30rem;
+  right: calc(50% - 2.5rem);
   background: #8090ab;
   width: 5rem;
   height: 2.2rem;
@@ -117,8 +116,8 @@ h2 {
   align-items: flex-end;
   transition: var(--transition);
   background: var(--main-color);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
 }
 .header-area .links-container.active {
   top: 5rem;
@@ -175,6 +174,11 @@ h2 {
 .toggle-menu.active .bottom {
   transform: rotate(-48deg) translate(0.4rem, -0.4rem);
 }
+@media (max-width: 1243px) {
+  .header-area .theme-btn {
+    margin-right: 9.5rem;
+  }
+}
 @media (max-width: 870px) {
   .header-area .toggle-menu {
     position: absolute;
@@ -185,7 +189,7 @@ h2 {
     cursor: pointer;
   }
   .header-area .theme-btn {
-    right: calc(50% - 2.5rem);
+    margin-right: 0;
   }
   .header-area .links-container {
     width: 100%;
@@ -231,7 +235,6 @@ h2 {
 #home {
   width: 60%;
   z-index: 1;
-  line-height: 1;
 }
 .introduction-text h2 {
   font-size: 3.4rem;
@@ -299,7 +302,7 @@ h2 {
 }
 .socials .social-icons li {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
 }
 .social-icons a {
   font-size: 3.3rem;
@@ -321,10 +324,10 @@ h2 {
 .tilt-wrapper {
   position: absolute;
   right: 0;
-  height: 22rem;
-  width: 24rem;
+  height: 21rem;
+  width: 23rem;
   border-radius: 50%;
-  box-shadow: 20px 35px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 21px 50px 20px rgba(0, 0, 0, 0.7);
 }
 .tilt-wrapper img {
   width: 25rem;
@@ -362,7 +365,7 @@ h2 {
   }
   #home {
     width: 100%;
-    padding-top: 20%;
+    padding-top: 7.5rem;
   }
   .introduction-text .content h2 {
     font-size: 2.7rem;
@@ -370,10 +373,7 @@ h2 {
   .tilt-wrapper {
     position: relative;
     top: auto;
-    margin: 4rem 0;
-  }
-  .tilt-wrapper.active2 {
-    left: 0;
+    margin: 5rem 0;
   }
   .introduction-text .about-btn {
     justify-content: center;
@@ -390,9 +390,6 @@ h2 {
   }
 }
 @media (max-width: 480px) {
-  #home {
-    padding-top: 30%;
-  }
   .introduction-text .content h2 {
     font-size: 2.3rem;
   }
