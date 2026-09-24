@@ -81,7 +81,7 @@ const textArray = [
 let i = 0;
 let j = 0;
 let isDeleting = false;
-let speed = 120;
+let speed = 100;
 
 function typeEffect() {
   const typingElement = document.getElementById("typing");
@@ -118,7 +118,7 @@ particlesJS("particles-js", {
     shape: { type: "circle" },
     opacity: { value: 0.8 },
     size: { value: 4, random: true },
-    move: { enable: true, speed: 2 },
+    move: { enable: true, speed: 1.5 },
   },
   interactivity: {
     events: {
