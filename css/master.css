@@ -6,7 +6,8 @@
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
-  --background-color: linear-gradient(to right, #7093a3, #1f3f72);
+  --background-color: url(../imgs/light.jpg) no-repeat center center/cover;
+  /* --background-color: linear-gradient(to right, #7093a3, #1f3f72); */
   --transition: all 0.8s ease-in-out;
   --border-radius: 2rem;
   --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
@@ -15,7 +16,7 @@
   --box-shadow3: 0 3px 5px rgba(0, 0, 0, 0.7);
 }
 .dark-theme {
-  --background-color: linear-gradient(to left, #022132, #00315c);
+  --background-color: url(../imgs/dark.jpg) no-repeat center center/cover;
   --text-color: white;
   --heading-color: #dddcdc;
   --boxL-shadow: -6px 6px 6px #6868684d;
@@ -452,7 +453,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
   text-align: left;
 }
 .info-box {
@@ -488,7 +488,7 @@ h2 {
 .experience {
   position: relative;
   width: 100%;
-  min-height: 95vh;
+  min-height: 60rem;
   padding-top: 4rem;
   box-sizing: border-box;
   text-align: center;
