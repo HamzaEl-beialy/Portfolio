@@ -116,8 +116,8 @@ h2 {
   align-items: flex-end;
   transition: var(--transition);
   background: var(--main-color);
-  border-bottom-left-radius: 6rem;
-  border-bottom-right-radius: 6rem;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
 }
 .header-area .links-container.active {
   top: 5rem;
@@ -218,7 +218,8 @@ h2 {
 .home-page {
   position: relative;
   width: 100%;
-  height: 45rem;
+  min-height: 45rem;
+  padding-top: 10rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -354,7 +355,7 @@ h2 {
 }
 @media (max-width: 870px) {
   .home-page {
-    height: 70rem;
+    padding-top: 0;
   }
   .home-page .container {
     flex-direction: column;
@@ -466,6 +467,7 @@ h2 {
 @media (max-width: 870px) {
   .about-me {
     min-height: 55rem;
+    margin-top: 4rem;
   }
   .about-content {
     flex-direction: column;
@@ -541,10 +543,10 @@ h2 {
   left: -11%;
 }
 .experience .arrow-icons i {
-  width: 2rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
-  height: 2rem;
   align-items: center;
   font-size: 3rem;
   border-radius: 2rem;
@@ -651,7 +653,7 @@ h2 {
 .work {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 45rem;
   text-align: center;
   transition: var(--transition);
 }
@@ -705,9 +707,6 @@ h2 {
 }
 
 @media (max-width: 867px) {
-  .work {
-    min-height: 100vh;
-  }
   .work .project {
     width: calc(50% - 1rem);
   }
@@ -716,9 +715,6 @@ h2 {
   }
 }
 @media (max-width: 500px) {
-  .work {
-    min-height: 135vh;
-  }
   .work .work-container {
     flex-direction: column;
     align-items: center;
