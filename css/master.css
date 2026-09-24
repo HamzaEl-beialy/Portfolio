@@ -17,7 +17,7 @@
 .dark-theme {
   --background-color: url(../imgs/dark.jpg) no-repeat center center/cover;
   --text-color: white;
-  --heading-color: #dddcdc;
+  --heading-color: #8da3c9;
   --boxL-shadow: -6px 6px 6px #2b2b2b4d;
   --boxR-shadow: 6px 6px 6px #2b2b2b4d;
   --box-shadow2: 8px 8px 6px #2b2b2b4d;
