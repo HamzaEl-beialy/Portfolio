@@ -7,7 +7,6 @@
   --text-color: #262626;
   --p-color: #ffffff;
   --background-color: url(../imgs/light.jpg) no-repeat center center/cover;
-  /* --background-color: linear-gradient(to right, #7093a3, #1f3f72); */
   --transition: all 0.8s ease-in-out;
   --border-radius: 2rem;
   --boxL-shadow: -7px 7px 10px rgba(0, 0, 0, 0.7);
@@ -19,10 +18,10 @@
   --background-color: url(../imgs/dark.jpg) no-repeat center center/cover;
   --text-color: white;
   --heading-color: #dddcdc;
-  --boxL-shadow: -6px 6px 6px #6868684d;
-  --boxR-shadow: 6px 6px 6px #6868684d;
-  --box-shadow2: 8px 8px 6px #6868684d;
-  --box-shadow3: 0 2px 6px #6868684d;
+  --boxL-shadow: -6px 6px 6px #2b2b2b4d;
+  --boxR-shadow: 6px 6px 6px #2b2b2b4d;
+  --box-shadow2: 8px 8px 6px #2b2b2b4d;
+  --box-shadow3: 0 2px 6px #2b2b2b4d;
 }
 *,
 *::before,
