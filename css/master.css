@@ -94,7 +94,7 @@ h2 {
   color: black;
 }
 .header-area .theme-btn span {
-  width: 43%;
+  width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,7 +504,7 @@ h2 {
   height: 100%;
   background: var(--btn-color);
   top: 0;
-  left: 50%;
+  right: calc(50% - 1.5rem);
   transform: translateX(-50%);
   z-index: -1;
 }
@@ -542,15 +542,15 @@ h2 {
   left: -11%;
 }
 .experience .arrow-icons i {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 2rem;
-  background: var(--btn-color);
-  color: var(--heading-color);
+  background: var(--main-color);
+  color: var(--btn-color);
 }
 .experience .left::before,
 .experience .right::before {
@@ -629,7 +629,7 @@ h2 {
     left: 4% !important;
   }
   .experience .timeline::after {
-    left: 0.5rem;
+    left: 1.5rem;
   }
   .experience .left::before,
   .experience .right::before {
