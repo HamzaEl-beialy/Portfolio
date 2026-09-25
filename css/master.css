@@ -121,7 +121,7 @@ h2 {
   border-bottom-right-radius: 5rem;
 }
 .header-area .links-container.active {
-  top: 5rem;
+  top: 4.5rem;
   opacity: 1;
 }
 .header-area .links li {
@@ -1218,7 +1218,7 @@ form .button-area {
     font-size: 1.8rem;
   }
   .introduction-text .content h2 span {
-    -webkit-text-stroke: 1px var(--heading-color);
+    -webkit-text-stroke: 0.5px var(--heading-color);
   }
   .experience .tag,
   .work .project .project-text h2,
