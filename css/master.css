@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 :root {
   --main-color: rgb(0, 0, 0);
-  --btn-color: #106bc6;
+  --btn-color: #0e5fb0;
   --heading-color: #000000;
   --text-color: #262626;
   --p-color: #ffffff;
@@ -241,10 +241,24 @@ h2 {
 .introduction-text h2 {
   font-size: 3.4rem;
   color: var(--heading-color);
+  letter-spacing: 5px;
 }
 .introduction-text .content h2 span {
-  color: var(--btn-color);
-  -webkit-text-stroke: 1px var(--heading-color);
+  background: linear-gradient(90deg, var(--btn-color), var(--heading-color));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite;
+}
+@keyframes gradientText {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
 }
 .introduction-text p {
   font-size: 1.5rem;
@@ -394,9 +408,7 @@ h2 {
 @media (max-width: 480px) {
   .introduction-text .content h2 {
     font-size: 2.3rem;
-  }
-  .introduction-text .content h2 span {
-    -webkit-text-stroke: 1px var(--heading-color);
+    letter-spacing: 2px;
   }
   .introduction-text .btn {
     font-size: 0.8rem;
@@ -426,7 +438,7 @@ h2 {
 /* End Home Page */
 .about-me {
   text-align: center;
-  height: 40rem;
+  min-height: 40rem;
 }
 .about-me .container {
   width: 80%;
@@ -437,12 +449,16 @@ h2 {
 .reviews h2,
 .contact h2,
 .work .work-heading {
+  background: linear-gradient(90deg, var(--btn-color), var(--heading-color));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 4s ease-in-out infinite;
   font-size: 3.5rem;
-  color: var(--btn-color);
-  -webkit-text-stroke: 1px var(--heading-color);
   margin-bottom: 2rem;
   display: inline-block;
   position: relative;
+  letter-spacing: 3px;
 }
 .about-image img {
   flex: 1 1 40%;
@@ -469,7 +485,6 @@ h2 {
 }
 @media (max-width: 870px) {
   .about-me {
-    min-height: 55rem;
     margin-top: 4rem;
   }
   .about-content {
@@ -728,8 +743,9 @@ h2 {
 }
 /* End Work */
 /* Start Contact */
-.contact {
-  height: 45rem;
+.contact,
+.reviews {
+  min-height: 50rem;
   background-image: url(../imgs/contact.png);
   background-size: contain;
   background-position: center;
@@ -879,15 +895,6 @@ form .button-area {
 }
 /* End Contact */
 /* Start Reviews */
-.reviews {
-  height: 50rem;
-  background-image: url(../imgs/contact.png);
-  background-size: contain;
-  background-position: center;
-  text-align: center;
-  position: relative;
-  display: flex;
-}
 .reviews .container {
   position: absolute;
   top: 0;
@@ -899,11 +906,13 @@ form .button-area {
 .revs {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 12rem;
+  position: absolute;
+  height: 10rem;
   overflow: scroll;
   scrollbar-width: none;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .revs .revBox .account-pic {
   position: absolute;
@@ -1216,9 +1225,6 @@ form .button-area {
 @media (max-width: 390px) {
   .introduction-text .content h2 {
     font-size: 1.8rem;
-  }
-  .introduction-text .content h2 span {
-    -webkit-text-stroke: 0.5px var(--heading-color);
   }
   .experience .tag,
   .work .project .project-text h2,
