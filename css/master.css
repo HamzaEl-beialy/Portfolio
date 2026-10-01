@@ -875,7 +875,7 @@ form .form-group {
 .revForm .field {
   height: 3.5rem;
   display: flex;
-  position: absolute;
+  position: relative;
   margin-top: 1rem;
   width: 100%;
 }
