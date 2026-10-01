@@ -37,9 +37,9 @@
             <li><a href="#" data-section=".home-page">Home</a></li>
             <li><a href="#" data-section=".about-me">About</a></li>
             <li><a href="#" data-section=".experience">Skills</a></li>
-            <li><a href="#" data-section=".work">Work</a></li>
-            <li><a href="#" data-section=".contact">Contact</a></li>
+            <li><a href="#" data-section=".work">Projects</a></li>
             <li><a href="#" data-section=".reviews">Reviews</a></li>
+            <li><a href="#" data-section=".contact">Contact</a></li>
           </ul>
         </nav>
         <div class="theme-btn">
@@ -54,10 +54,17 @@
         <div class="introduction-text" id="home">
           <div class="content">
             <h2 data-aos="fade-down">
-              Hello There I'm
+              Hello There
+              <img
+                src="https://em-content.zobj.net/source/animated-noto-color-emoji/356/waving-hand_1f44b.gif"
+                alt="waving hand"
+                width="50"
+                height="50"
+              />
               <br />
-              <span data-aos="fade-down" data-aos-delay="200"
-                >Hamza Elbeialy</span
+              I'am
+              <span data-aos="zoom-out" data-aos-delay="300">
+                Hamza Elbeialy</span
               >
             </h2>
             <p data-aos="fade-down" data-aos-delay="300">
@@ -67,7 +74,7 @@
             </p>
             <div class="about-btn" data-aos="fade-down" data-aos-delay="400">
               <a href="#about-me" data-section=".about-me" class="btn">
-                <span>About</span>
+                <span>About Me</span>
                 <i class="fas fa-arrow-circle-down"></i>
               </a>
             </div>
@@ -142,21 +149,37 @@
     <!-- About Section -->
     <section class="about-me" id="about-me">
       <div class="container">
-        <h2 data-aos="fade-up">About</h2>
+        <h2 data-aos="fade-up">About Me</h2>
         <div class="about-content" data-aos="fade-down" data-aos-delay="700">
-          <div class="info-box" id="infoBox">
-            <p>
-              Hi, I'm Hamza Elbeialy — a full-stack developer passionate about
-              building practical web applications. I have experience with OOP
-              and modern development tools, and I use AI to improve my workflow,
-              solve problems, and work more efficiently. Through hands-on
-              projects, I've developed strong skills in web development, design,
-              and problem-solving. I focus on delivering clean and effective
-              solutions.
-            </p>
-          </div>
-          <div class="about-image" id="aboutImage">
+          <div
+            class="about-image"
+            id="aboutImage"
+            data-aos="zoom-in-down"
+            data-aos-delay="1000"
+          >
             <img class="animated-tilt" src="imgs/MyLogo.jpg" />
+          </div>
+          <div class="info-box" id="infoBox">
+            <h3>Hamza Elbeialy</h3>
+            <div class="career">
+              <h4>Software Engineer</h4>
+            </div>
+            <p>
+              Hi! 🎉 I’m a Front-End Developer based in Alexandria, Egypt,
+              currently studying Computer and Data Science at Alexandria
+              University! 🎓 I’ve been exploring web development through
+              personal projects and hands-on learning. 💻 My focus is on
+              building clean and responsive websites that seamlessly blend
+              functionality with modern design. I enjoy turning ideas into real
+              projects, experimenting with new technologies, and continuously
+              improving my skills along the way! 🚀
+            </p>
+            <div class="skills-btn" data-aos="fade-down" data-aos-delay="400">
+              <a href="#experience" data-section=".experience" class="btn">
+                <span>Technical Skills</span>
+                <i class="fas fa-arrow-circle-down"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -261,7 +284,7 @@
             </div>
           </div>
         </div>
-        <div class="morebtn" data-aos="zoom-in-down" data-aos-delay="1350">
+        <div class="morebtn" data-aos="zoom-in-down" data-aos-delay="1150">
           <a
             href="https://eg.linkedin.com/in/hamza-elbeialy-94571731b"
             class="btn"
@@ -272,11 +295,11 @@
         </div>
       </div>
     </section>
-    <!-- My Work -->
-    <section class="work" id="work" data-aos="fade-up">
-      <h2 class="work-heading">Work</h2>
+    <!-- My Projects -->
+    <section class="work" id="work" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="work-heading">Projects</h2>
       <div class="work-container">
-        <div class="project" data-aos="fade-down" data-aos-delay="700">
+        <div class="project" data-aos="fade-down" data-aos-delay="1000">
           <div class="project-main">
             <img src="./imgs/bank.png" />
           </div>
@@ -293,7 +316,7 @@
             ></a>
           </div>
         </div>
-        <div class="project" data-aos="fade-down" data-aos-delay="1100">
+        <div class="project" data-aos="fade-down" data-aos-delay="1400">
           <div class="project-main">
             <img src="./imgs/specialdesign.png" />
           </div>
@@ -313,7 +336,7 @@
             ></a>
           </div>
         </div>
-        <div class="project" data-aos="fade-down" data-aos-delay="1500">
+        <div class="project" data-aos="fade-down" data-aos-delay="1800">
           <div class="project-main">
             <img src="./imgs/template.png" />
           </div>
@@ -334,9 +357,51 @@
         </div>
       </div>
     </section>
+    <!-- Start Reviews-->
+    <section class="reviews">
+      <h2 class="heading" data-aos="fade-up" data-aos-delay="300">Reviews</h2>
+      <div
+        class="container"
+        id="reviews"
+        data-aos="fade-down"
+        data-aos-delay="1300"
+      >
+        <div class="revs"></div>
+        <div class="reviews-pic">
+          <img src="./imgs/rev.png" alt="Contact" />
+        </div>
+        <form id="reviewForm">
+          <div class="revForm">
+            <div class="field">
+              <input type="text" id="reviewName" placeholder="Name" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="message">
+              <textarea
+                name="message"
+                id="reviewMessage"
+                placeholder="Enter Your Review"
+                required
+              ></textarea>
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div
+              class="button-area"
+              data-aos="zoom-in-down"
+              data-aos-delay="500"
+            >
+              <button type="submit">
+                Submit <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End Reviews-->
     <!-- Contact Section -->
     <section class="contact" id="contact">
-      <h2 data-aos="fade-up" data-aos-delay="300">Contact</h2>
+      <h2 data-aos="fade-up" data-aos-delay="300">Contact Me</h2>
       <div
         class="container"
         id="contact-form"
@@ -375,7 +440,7 @@
               <i class="fa-solid fa-comments"></i>
             </div>
           </div>
-          <div class="button-area" data-aos="zoom-in-down" data-aos-delay="700">
+          <div class="button-area" data-aos="zoom-in-down" data-aos-delay="500">
             <button type="submit">
               Submit <i class="fa fa-paper-plane"></i>
             </button>
@@ -383,48 +448,6 @@
         </form>
       </div>
     </section>
-    <!-- Start Reviews-->
-    <section class="reviews">
-      <h2 class="heading" data-aos="fade-up" data-aos-delay="300">Reviews</h2>
-      <div
-        class="container"
-        id="reviews"
-        data-aos="fade-down"
-        data-aos-delay="1300"
-      >
-        <div class="revs"></div>
-        <div class="reviews-pic">
-          <img src="./imgs/rev.png" alt="Contact" />
-        </div>
-        <form id="reviewForm">
-          <div class="revForm">
-            <div class="field">
-              <input type="text" id="reviewName" placeholder="Name" required />
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="message">
-              <textarea
-                name="message"
-                id="reviewMessage"
-                placeholder="Enter Your Review"
-                required
-              ></textarea>
-              <i class="fa-solid fa-comments"></i>
-            </div>
-            <div
-              class="button-area"
-              data-aos="zoom-in-down"
-              data-aos-delay="700"
-            >
-              <button type="submit">
-                Submit <i class="fa fa-paper-plane"></i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <!-- End Reviews-->
     <!-- Footer -->
     <footer class="footer">
       <div class="box-container">

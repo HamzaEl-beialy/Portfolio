@@ -102,6 +102,7 @@ h2 {
   font-size: 0.8rem;
 }
 .header-area .theme-btn .active {
+  color: var(--btn-color);
   background-color: #434343;
   width: 57%;
   border-radius: var(--border-radius);
@@ -181,12 +182,19 @@ h2 {
   }
 }
 @media (max-width: 870px) {
+  .header-area .container {
+    left: 0;
+    width: 100%;
+  }
+  .header-area .logo {
+    left: 1rem;
+  }
   .header-area .toggle-menu {
     position: absolute;
     width: 2.4rem;
     height: 2.5rem;
     top: 0.6rem;
-    right: 0;
+    right: 1rem;
     cursor: pointer;
   }
   .header-area .theme-btn {
@@ -232,44 +240,36 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  column-gap: 3.25rem;
 }
 #home {
-  width: 60%;
   z-index: 1;
 }
+.introduction-text .content {
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
 .introduction-text h2 {
-  font-size: 3.4rem;
+  font-size: 3.75rem;
+  line-height: 1;
   color: var(--heading-color);
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 .introduction-text .content h2 span {
-  background: linear-gradient(90deg, var(--btn-color), var(--heading-color));
+  background: linear-gradient(90deg, var(--btn-color), var(--text-color));
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientText 4s ease-in-out infinite;
 }
-@keyframes gradientText {
-  0%,
-  100% {
-    background-position: 0% center;
-  }
-
-  50% {
-    background-position: 100% center;
-  }
-}
 .introduction-text p {
   font-size: 1.5rem;
   min-height: 3rem;
-  margin: 1rem 0;
   color: var(--text-color);
 }
 .introduction-text .about-btn {
-  margin-bottom: 1rem;
   display: flex;
-  gap: 0.8rem;
 }
 .introduction-text .btn {
   padding: 0.9rem 0.11rem;
@@ -284,7 +284,8 @@ h2 {
   cursor: pointer;
   font-weight: bold;
 }
-.introduction-text .btn:hover {
+.introduction-text .btn:hover,
+.about-me .btn:hover {
   background: var(--btn-color);
   color: var(--main-color);
 }
@@ -314,7 +315,7 @@ h2 {
 }
 .socials .social-icons li {
   display: inline-block;
-  margin-right: 0.7rem;
+  margin-right: 1rem;
 }
 .social-icons a {
   font-size: 3.3rem;
@@ -336,13 +337,13 @@ h2 {
 .tilt-wrapper {
   position: absolute;
   right: 0;
-  height: 21rem;
-  width: 23rem;
+  height: 17rem;
+  width: 19rem;
   border-radius: 50%;
   box-shadow: 21px 50px 20px rgba(0, 0, 0, 0.7);
 }
 .tilt-wrapper img {
-  width: 25rem;
+  width: 20rem;
 }
 .home-page .tilt-wrapper .animated-tilt,
 .about-image img.animated-tilt {
@@ -370,39 +371,15 @@ h2 {
     min-height: 55rem;
   }
   .home-page .container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+    flex-direction: column-reverse;
+    gap: 1.8rem;
+    width: 100%;
   }
   #home {
-    width: 100%;
-    padding-top: 7rem;
-  }
-  .introduction-text .content h2 {
-    font-size: 2.7rem;
+    padding: 1.5rem;
   }
   .tilt-wrapper {
     position: relative;
-    top: auto;
-    margin: 3rem 0;
-  }
-  .introduction-text .about-btn {
-    justify-content: center;
-  }
-  .introduction-text .btn {
-    font-size: 1rem;
-    width: 8rem;
-  }
-  .social-icons a {
-    font-size: 2.5rem;
-    line-height: 1.3;
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-  .introduction-text .content p {
-    font-size: 1.3rem;
-    height: 4rem;
   }
 }
 @media (max-width: 480px) {
@@ -410,29 +387,20 @@ h2 {
     font-size: 2.3rem;
     letter-spacing: 2px;
   }
-  .introduction-text .btn {
-    font-size: 0.8rem;
-    width: 5.5rem;
-  }
-  .social-icons a {
-    font-size: 1.9rem;
-    line-height: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+  #home {
+    padding: 0.5rem;
   }
   .socials .social-icons li {
     margin-right: 0.2rem;
   }
   .tilt-wrapper {
-    height: 17rem;
-    width: 18rem;
+    width: 100%;
+    padding: 0rem 3.5rem;
+    margin-bottom: 2rem;
+    box-shadow: none;
   }
   .tilt-wrapper img {
-    width: 20rem;
-  }
-  .introduction-text .content p {
-    font-size: 1rem;
-    height: 4rem;
+    width: 100%;
   }
 }
 /* End Home Page */
@@ -449,7 +417,7 @@ h2 {
 .reviews h2,
 .contact h2,
 .work .work-heading {
-  background: linear-gradient(90deg, var(--btn-color), var(--heading-color));
+  background: linear-gradient(90deg, var(--btn-color), var(--text-color));
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -460,10 +428,11 @@ h2 {
   position: relative;
   letter-spacing: 3px;
 }
+.about-image {
+  rotate: -6deg;
+}
 .about-image img {
-  flex: 1 1 40%;
-  max-width: 21rem;
-  width: 100%;
+  width: 17rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow2);
 }
@@ -472,28 +441,54 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   text-align: left;
 }
 .info-box {
-  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2.5rem;
+}
+.info-box h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.info-box .career {
+  background-color: var(--btn-color);
+  width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
 }
 .info-box p {
-  font-size: 1.8rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--text-color);
 }
+.about-me .btn {
+  padding: 0.6rem 1rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: 0.3s;
+  color: var(--btn-color);
+  background: var(--main-color);
+  box-shadow: var(--box-shadow3);
+  cursor: pointer;
+  font-weight: bold;
+}
 @media (max-width: 870px) {
+  .about-me .container {
+    width: 100%;
+  }
   .about-me {
     margin-top: 4rem;
   }
   .about-content {
     flex-direction: column;
-    text-align: center;
-  }
-  .info-box,
-  .about-image img {
-    width: 100%;
   }
 }
 @media (max-width: 555px) {
@@ -641,11 +636,15 @@ h2 {
 @media (max-width: 870px) {
   .experience .container {
     width: 100%;
-    padding: 1rem 3rem;
+    padding: 1rem 2.75rem;
     left: 4% !important;
   }
+  .experience .timeline {
+    width: 100%;
+    padding: 1rem;
+  }
   .experience .timeline::after {
-    left: 1.5rem;
+    left: 2rem;
   }
   .experience .left::before,
   .experience .right::before {
@@ -669,6 +668,7 @@ h2 {
   position: relative;
   width: 100%;
   min-height: 45rem;
+  margin-bottom: 2rem;
   text-align: center;
   transition: var(--transition);
 }
@@ -725,6 +725,10 @@ h2 {
   .work .project {
     width: calc(50% - 1rem);
   }
+  .work .work-container {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
   .tooltip {
     display: none;
   }
@@ -742,6 +746,96 @@ h2 {
   }
 }
 /* End Work */
+/* Start Reviews */
+.reviews .container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  transition: var(--transition);
+}
+.revs {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 10rem;
+  overflow: scroll;
+  scrollbar-width: none;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.revs .revBox .account-pic {
+  position: absolute;
+  display: flex;
+  width: 3rem;
+  border-radius: 50%;
+  margin: -1.5rem 0rem;
+}
+.revs .revBox {
+  display: flex;
+  color: var(--btn-color);
+  border-radius: var(--border-radius);
+  height: 79%;
+  margin: 0 0.5rem;
+  align-items: center;
+  min-width: 20rem;
+  max-width: 20rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.reviews .revBox h3 {
+  padding-top: 1.7rem;
+  margin-bottom: 0.5rem;
+  overflow: scroll;
+  max-height: 40%;
+  scrollbar-width: none;
+  line-height: 1;
+}
+.reviews .revBox p {
+  overflow: scroll;
+  scrollbar-width: none;
+  max-width: 18rem;
+  line-break: anywhere;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.reviews-pic {
+  width: 40%;
+  position: absolute;
+  top: 35%;
+}
+.reviews .reviews-pic img {
+  width: 20rem;
+}
+.reviews .revForm {
+  position: absolute;
+  right: 0;
+  top: 42%;
+  width: 60%;
+}
+@media (max-width: 870px) {
+  .reviews .container {
+    /* width: 100%; */
+    /* left: 0; */
+  }
+  .reviewsLeft {
+    opacity: 0;
+  }
+  .reviews .revForm {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .reviews {
+    min-height: 45rem;
+  }
+  .revs .revBox {
+    min-width: 12rem;
+  }
+}
+/* End Reviews */
 /* Start Contact */
 .contact,
 .reviews {
@@ -783,7 +877,7 @@ form .form-group {
 .revForm .field {
   height: 3.5rem;
   display: flex;
-  position: relative;
+  position: absolute;
   margin-top: 1rem;
   width: 100%;
 }
@@ -894,92 +988,6 @@ form .button-area {
   }
 }
 /* End Contact */
-/* Start Reviews */
-.reviews .container {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 100%;
-  transition: var(--transition);
-}
-.revs {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  height: 10rem;
-  overflow: scroll;
-  scrollbar-width: none;
-  top: 6rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.revs .revBox .account-pic {
-  position: absolute;
-  display: flex;
-  width: 3rem;
-  border-radius: 50%;
-  margin: -1.5rem 0rem;
-}
-.revs .revBox {
-  display: flex;
-  color: var(--btn-color);
-  border-radius: var(--border-radius);
-  height: 79%;
-  margin: 0 0.5rem;
-  align-items: center;
-  min-width: 20rem;
-  max-width: 20rem;
-  flex-direction: column;
-  padding: 0.5rem;
-}
-.reviews .revBox h3 {
-  padding-top: 1.7rem;
-  margin-bottom: 0.5rem;
-  overflow: scroll;
-  max-height: 40%;
-  scrollbar-width: none;
-  line-height: 1;
-}
-.reviews .revBox p {
-  overflow: scroll;
-  scrollbar-width: none;
-  max-width: 18rem;
-  line-break: anywhere;
-  font-size: 0.9rem;
-  line-height: 1;
-}
-.reviews-pic {
-  width: 40%;
-  position: absolute;
-  top: 35%;
-}
-.reviews .reviews-pic img {
-  width: 20rem;
-}
-.reviews .revForm {
-  position: absolute;
-  right: 0;
-  top: 42%;
-  width: 60%;
-}
-@media (max-width: 870px) {
-  .reviewsLeft {
-    opacity: 0;
-  }
-  .reviews .revForm {
-    width: 100%;
-  }
-}
-@media (max-width: 500px) {
-  .reviews {
-    min-height: 45rem;
-  }
-  .revs .revBox {
-    min-width: 12rem;
-  }
-}
-/* End Reviews */
 .footer {
   position: relative;
   background: black;
@@ -1223,13 +1231,17 @@ form .button-area {
   }
 }
 @media (max-width: 390px) {
-  .introduction-text .content h2 {
-    font-size: 1.8rem;
-  }
   .experience .tag,
   .work .project .project-text h2,
   .experience .desc p,
   .work .project-text p {
     font-size: 0.8rem;
+  }
+  .about-me h2,
+  .experience .heading,
+  .reviews h2,
+  .contact h2,
+  .work .work-heading {
+    font-size: 2.5rem;
   }
 }
