@@ -337,7 +337,7 @@ h2 {
 .tilt-wrapper {
   position: absolute;
   right: 0;
-  height: 17rem;
+  max-height: 17rem;
   width: 19rem;
   border-radius: 50%;
   box-shadow: 21px 50px 20px rgba(0, 0, 0, 0.7);
@@ -420,7 +420,7 @@ h2 {
 /* End Home Page */
 .about-me {
   text-align: center;
-  min-height: 40rem;
+  min-height: 35rem;
 }
 .about-me .container {
   width: 80%;
@@ -446,7 +446,7 @@ h2 {
   rotate: -6deg;
 }
 .about-image img {
-  width: 17rem;
+  width: 15rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow2);
 }
@@ -465,6 +465,7 @@ h2 {
   padding: 2.5rem;
 }
 .info-box h3 {
+  color: var(--heading-color);
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 600;
@@ -680,7 +681,7 @@ h2 {
 .work {
   position: relative;
   width: 100%;
-  min-height: 45rem;
+  min-height: 40rem;
   margin-bottom: 2rem;
   text-align: center;
   transition: var(--transition);
@@ -853,7 +854,7 @@ h2 {
 /* Start Contact */
 .contact,
 .reviews {
-  min-height: 50rem;
+  min-height: 40rem;
   background-image: url(../imgs/contact.png);
   background-size: contain;
   background-position: center;
