@@ -372,11 +372,12 @@ h2 {
   }
   .home-page .container {
     flex-direction: column-reverse;
-    gap: 1.8rem;
+    gap: 1.2rem;
     width: 100%;
   }
   #home {
     padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .tilt-wrapper {
     position: relative;
@@ -388,15 +389,14 @@ h2 {
     letter-spacing: 2px;
   }
   #home {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
   .socials .social-icons li {
     margin-right: 0.2rem;
   }
   .tilt-wrapper {
     width: 100%;
-    padding: 0rem 3.5rem;
-    margin-bottom: 2rem;
+    padding: 0rem 4.5rem;
     box-shadow: none;
   }
   .tilt-wrapper img {
@@ -441,7 +441,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  column-gap: 5rem;
   text-align: left;
 }
 .info-box {
@@ -817,8 +817,6 @@ h2 {
 }
 @media (max-width: 870px) {
   .reviews .container {
-    /* width: 100%; */
-    /* left: 0; */
   }
   .reviewsLeft {
     opacity: 0;
