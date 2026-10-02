@@ -64,7 +64,7 @@ onSnapshot(
       reviewsContainer.innerHTML = `
         <div class="revBox">
           <img src="./imgs/account.png" class="account-pic">
-          <h3>No reviews yet</h3>
+          <h2>No reviews yet</h2>
           <p>Be the first to leave a review!</p>
         </div>
       `;
@@ -81,7 +81,7 @@ onSnapshot(
 
       reviewBox.innerHTML = `
         <img src="./imgs/account.png" class="account-pic">
-        <h3>${review.name}</h3>
+        <h2>${review.name}</h2>
         <p>${review.message}</p>
       `;
 

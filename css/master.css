@@ -44,16 +44,18 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Fira", sans-serif;
+  font-family: "Cousine", sans-serif;
   background: var(--background-color);
   overflow-x: hidden;
   transition: var(--transition);
 }
 h2 {
+  font-family: "Fira", sans-serif;
   font-weight: bold;
   line-height: 1;
 }
 .header-area {
+  font-family: "Fira", sans-serif;
   position: fixed;
   background: var(--main-color);
   z-index: 1000;
@@ -118,8 +120,8 @@ h2 {
   align-items: flex-end;
   transition: var(--transition);
   background: var(--main-color);
-  border-bottom-left-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 .header-area .links-container.active {
   top: 4.5rem;
@@ -138,21 +140,8 @@ h2 {
   display: inline-block;
   text-decoration: none;
 }
-.header-area .links li a::before {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 4.5rem;
-  border-radius: var(--border-radius);
-  background-color: var(--btn-color);
-  bottom: -0.5rem;
-  left: 53%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  transition: 0.3s ease;
-}
-.header-area .links li a:hover::before {
-  transform: translateX(-50%) scaleX(1);
+.header-area .links li a:hover {
+  color: #4e7ccb;
 }
 .header-area .toggle-menu {
   background: none;
@@ -218,10 +207,6 @@ h2 {
   .header-area .links li a {
     font-size: 1.7rem;
   }
-  .header-area .links li a::before {
-    bottom: -2px;
-    width: 6rem;
-  }
 }
 /* Start Home Page */
 .home-page {
@@ -271,9 +256,10 @@ h2 {
 .introduction-text .about-btn {
   display: flex;
 }
-.introduction-text .btn {
-  padding: 0.9rem 0.11rem;
-  width: 9rem;
+.introduction-text .btn,
+.about-me .btn {
+  padding: 0.75rem 0.11rem;
+  width: 10rem;
   text-align: center;
   border-radius: var(--border-radius);
   font-size: 1.2rem;
@@ -484,16 +470,8 @@ h2 {
   color: var(--text-color);
 }
 .about-me .btn {
-  padding: 0.6rem 1rem;
-  text-align: center;
-  border-radius: var(--border-radius);
+  padding: 0.7rem 0.8rem;
   font-size: 1rem;
-  transition: 0.3s;
-  color: var(--btn-color);
-  background: var(--main-color);
-  box-shadow: var(--box-shadow3);
-  cursor: pointer;
-  font-weight: bold;
 }
 @media (max-width: 870px) {
   .about-me .container {
@@ -606,11 +584,11 @@ h2 {
 .experience .content {
   border-radius: var(--border-radius);
   position: relative;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 .experience .tag,
 .work .project .project-text h2,
-.reviews .revBox h3 {
+.reviews .revBox h2 {
   font-size: 1.2rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -619,11 +597,10 @@ h2 {
 .experience .desc {
   padding: 0 1rem 1rem 1rem;
 }
-.experience .desc p,
-.reviews .revBox p {
+.experience .desc p {
   color: var(--p-color);
   line-height: 1;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
 }
 .morebtn {
@@ -802,7 +779,7 @@ h2 {
   flex-direction: column;
   padding: 0.5rem;
 }
-.reviews .revBox h3 {
+.reviews .revBox h2 {
   padding-top: 1.7rem;
   margin-bottom: 0.5rem;
   overflow: scroll;
@@ -817,6 +794,8 @@ h2 {
   line-break: anywhere;
   font-size: 0.9rem;
   line-height: 1;
+  color: var(--p-color);
+  text-align: center;
 }
 .reviews-pic {
   width: 40%;
@@ -1112,7 +1091,7 @@ form .button-area {
 .experience .heading::before,
 .work .work-heading::before,
 .contact h2::before,
-.reviews h2::before {
+.reviews .heading::before {
   content: "";
   position: absolute;
   height: 5px;
