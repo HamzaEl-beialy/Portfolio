@@ -372,7 +372,7 @@ h2 {
   }
   .home-page .container {
     flex-direction: column-reverse;
-    gap: 1.2rem;
+    gap: 1.4rem;
     width: 100%;
   }
   .introduction-text .content {
