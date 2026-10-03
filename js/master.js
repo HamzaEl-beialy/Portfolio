@@ -24,42 +24,31 @@ const scrollTopBtn = document.getElementById("scroll-top");
 window.addEventListener("scroll", () => {
   scrollTopBtn.classList.toggle("active", window.scrollY > 100);
 });
+// Theme Toggle
 
-// Dark Theme
 const themeBtn = document.querySelector(".theme-btn");
+const themeIcon = themeBtn?.querySelector("i");
 
-// Check saved theme on load
-if (localStorage.getItem("theme") === "dark") {
+// Apply saved theme on load
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
   document.body.classList.add("dark-theme");
-  // Dark mode → Moon active
-  themeBtn?.querySelector("span.moon")?.classList.add("active");
-  themeBtn?.querySelector("span.sun")?.classList.remove("active");
-} else {
-  document.body.classList.remove("dark-theme");
-  // Light mode → Sun active
-  themeBtn?.querySelector("span.sun")?.classList.add("active");
-  themeBtn?.querySelector("span.moon")?.classList.remove("active");
+  themeIcon?.classList.replace("fa-moon", "fa-sun");
 }
 
-// Toggle theme on button click
+// Toggle theme
 themeBtn?.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-
-  const isDark = document.body.classList.contains("dark-theme");
+  const isDark = document.body.classList.toggle("dark-theme");
 
   if (isDark) {
     localStorage.setItem("theme", "dark");
-    // Dark mode → Moon active
-    themeBtn.querySelector("span.moon")?.classList.add("active");
-    themeBtn.querySelector("span.sun")?.classList.remove("active");
+    themeIcon?.classList.replace("fa-moon", "fa-sun");
   } else {
     localStorage.setItem("theme", "light");
-    // Light mode → Sun active
-    themeBtn.querySelector("span.sun")?.classList.add("active");
-    themeBtn.querySelector("span.moon")?.classList.remove("active");
+    themeIcon?.classList.replace("fa-sun", "fa-moon");
   }
 });
-
 // ========== Mobile Menu ==========
 const toggleBtn = document.querySelector(".header-area .toggle-menu");
 const linksContainer = document.querySelector(".header-area .links-container");
@@ -72,10 +61,9 @@ if (toggleBtn && linksContainer) {
 // animation for typing effect
 const textArray = [
   "Web Design & Development",
-  "Using New Framworks & Libraries",
-  "Java & UI/UX Design",
-  "Building Visual & Creative Design",
-  "Using AI Tools",
+  "Modern Frameworks & Libraries",
+  "Creative & Visual Design",
+  "AI Tools & Technologies",
 ];
 
 let i = 0;
