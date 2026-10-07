@@ -116,7 +116,8 @@ h2 {
 }
 .header-area .links li a:hover,
 .header-area .theme-btn:hover {
-  color: #4e7ccb;
+  color: #1274d5;
+  scale: 1.125;
 }
 .header-area .toggle-menu {
   background: none;
@@ -202,7 +203,7 @@ h2 {
   z-index: 1;
 }
 .introduction-text .content {
-  gap: 1.2rem;
+  gap: 1.7rem;
   display: flex;
   flex-direction: column;
 }
@@ -210,7 +211,6 @@ h2 {
   font-size: 3.75rem;
   line-height: 1;
   color: var(--heading-color);
-  letter-spacing: 3px;
 }
 .introduction-text .content h2 span {
   background: linear-gradient(90deg, var(--btn-color), var(--text-color));
@@ -298,7 +298,6 @@ h2 {
   max-height: 17rem;
   width: 19rem;
   border-radius: 50%;
-  box-shadow: 21px 50px 20px rgba(0, 0, 0, 0.7);
 }
 .tilt-wrapper img {
   width: 20rem;
@@ -389,7 +388,7 @@ h2 {
 .reviews h2,
 .contact h2,
 .work .work-heading {
-  background: linear-gradient(90deg, var(--btn-color), var(--main-color));
+  background: linear-gradient(90deg, var(--btn-color), var(--text-color));
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -427,18 +426,20 @@ h2 {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 600;
+  letter-spacing: 2px;
 }
 .info-box .career {
   background-color: var(--btn-color);
   width: fit-content;
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.25;
   padding: 0.25rem 0.5rem;
   border-radius: var(--border-radius);
+  letter-spacing: 2px;
 }
 .info-box p {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   color: var(--text-color);
 }
 .about-me .btn {
@@ -558,20 +559,21 @@ h2 {
   position: relative;
   padding: 1rem;
 }
-.experience .tag,
+.experience .tag h2,
 .work .project .project-text h2,
 .reviews .revBox h2 {
   font-size: 1.2rem;
   padding: 0.5rem 0;
   text-align: center;
   color: var(--btn-color);
+  letter-spacing: 2px;
 }
 .experience .desc {
-  padding: 0 1rem 1rem 1rem;
+  padding-bottom: 0.5rem;
 }
 .experience .desc p {
   color: var(--p-color);
-  line-height: 1;
+  line-height: 1.2;
   font-size: 1rem;
   text-align: center;
 }
@@ -582,11 +584,11 @@ h2 {
 }
 .morebtn .btn span {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 }
 .morebtn .btn i {
   margin-left: 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 0.3s;
 }
 .morebtn .btn:hover {
@@ -891,16 +893,18 @@ form .button-area {
 }
 .button-area button,
 .morebtn .btn {
-  color: var(--btn-color);
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
   border-radius: var(--border-radius);
   padding: 1rem 1.3rem;
   background: var(--main-color);
   box-shadow: var(--box-shadow3);
   transition: 0.3s ease;
+  color: var(--btn-color);
+  background-color: var(--main-color);
 }
 .button-area button:hover {
   background: var(--btn-color);
@@ -915,7 +919,7 @@ form .button-area {
   position: relative;
   top: 6px;
   left: 2px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: 0.3s ease;
   color: var(--btn-color);
 }
@@ -1172,7 +1176,7 @@ form .button-area {
     transform: translateX(50px) scale(0.5);
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   .experience .tag,
   .work .project .project-text h2,
   .experience .desc p,
