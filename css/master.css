@@ -187,7 +187,7 @@ h2 {
   position: relative;
   width: 100%;
   min-height: 45rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -362,11 +362,6 @@ h2 {
   background: white;
   border-radius: 50%;
   transition: box-shadow 0.3s ease;
-}
-.tilt-wrapper .pop1:hover,
-.tilt-wrapper .pop2:hover,
-.tilt-wrapper .pop3:hover,
-.tilt-wrapper .pop4:hover {
   box-shadow: var(--box-shadow3);
 }
 .tilt-wrapper .pop1 img,
@@ -379,11 +374,11 @@ h2 {
   object-fit: contain;
 }
 .tilt-wrapper .pop1 {
-  top: -1.5rem;
-  left: 0;
+  top: -0.5rem;
+  left: 0.5rem;
 }
 .tilt-wrapper .pop2 {
-  top: -0.5rem;
+  top: 0.5rem;
   right: -2.5rem;
 }
 .tilt-wrapper .pop3 {
@@ -395,8 +390,10 @@ h2 {
   right: 0;
 }
 .tilt-wrapper > img {
+  position: absolute;
   display: block;
   width: 100%;
+  top: 1rem;
   height: auto;
   object-fit: contain;
 }
