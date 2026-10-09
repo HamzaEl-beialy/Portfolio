@@ -117,7 +117,9 @@ h2 {
 .header-area .links li a:hover,
 .header-area .theme-btn:hover {
   color: #1274d5;
-  scale: 1.125;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+  scale: 1.05;
 }
 .header-area .toggle-menu {
   background: none;
@@ -216,20 +218,36 @@ h2 {
 }
 .introduction-text h2 {
   font-size: 3.75rem;
-  line-height: 1.1;
+  font-weight: normal;
   color: var(--heading-color);
   white-space: nowrap;
+}
+.introduction-text .content h2 span {
+  font-size: 3.75rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    var(--btn-color),
+    var(--text-color),
+    var(--btn-color)
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientWave 5s ease-in-out infinite alternate;
+}
+@keyframes gradientWave {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 .introduction-text h2 img {
   width: 3.25rem;
   height: 3.25rem;
-}
-.introduction-text .content h2 span {
-  background: linear-gradient(90deg, var(--btn-color), var(--text-color));
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientText 4s ease-in-out infinite;
 }
 .introduction-text p {
   font-size: 1.5rem;
@@ -382,7 +400,7 @@ h2 {
   height: auto;
   object-fit: contain;
 }
-.about-image img.animated-tilt {
+.animated-tilt {
   animation: professionalFloat 5.5s ease-in-out infinite;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -407,14 +425,13 @@ h2 {
 }
 @media (max-width: 1024px) {
   .home-page {
-    min-height: auto;
+    min-height: 55rem;
     padding-top: 5rem;
     padding-bottom: 4rem;
   }
   .home-page .container {
     display: grid;
     grid-template-columns: 1fr;
-    min-height: auto;
     gap: 0.4rem;
   }
   #home {
@@ -444,7 +461,6 @@ h2 {
   }
   .introduction-text h2 {
     font-size: 2.5rem;
-    line-height: 1.15;
     white-space: normal;
   }
   .introduction-text h2 img {
@@ -499,10 +515,10 @@ h2 {
 .contact h2,
 .work .work-heading {
   background: linear-gradient(90deg, var(--btn-color), var(--text-color));
+  animation: gradientWave 5s ease-in-out infinite alternate;
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientText 4s ease-in-out infinite;
   font-size: 3.5rem;
   margin-bottom: 2rem;
   display: inline-block;
